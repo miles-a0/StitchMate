@@ -1,1 +1,2565 @@
-[]
+[
+  {
+    "id": "co",
+    "abbreviation": "CO",
+    "fullName": "Cast On",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Create the foundation row of stitches on the needle.",
+    "steps": [
+      "Make a slip knot and place on left needle.",
+      "Wrap working yarn around thumb.",
+      "Insert needle under yarn on thumb, catch loop, and place on needle.",
+      "Repeat until required number of stitches."
+    ],
+    "also_known_as": [
+      "Cast On"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "bo",
+    "abbreviation": "BO",
+    "fullName": "Bind Off",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Securely finish the edge of knitting so stitches do not unravel.",
+    "steps": [
+      "Knit two stitches.",
+      "Lift first stitch over second and off the needle.",
+      "Knit next stitch.",
+      "Lift first over second and off.",
+      "Repeat until one stitch remains, cut yarn and pull through."
+    ],
+    "also_known_as": [
+      "Cast Off"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "k",
+    "abbreviation": "k",
+    "fullName": "Knit",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "The fundamental knitting stitch. Creates a smooth 'V' pattern on the right side of fabric.",
+    "steps": [
+      "Insert right needle into front of stitch on left needle.",
+      "Wrap yarn counter-clockwise around right needle.",
+      "Pull loop through stitch.",
+      "Slide old stitch off left needle."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "p",
+    "abbreviation": "p",
+    "fullName": "Purl",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "The second fundamental stitch. Creates a bump on the right side, smooth on the wrong side.",
+    "steps": [
+      "Bring yarn to front of work.",
+      "Insert right needle into front of stitch from right to left.",
+      "Wrap yarn counter-clockwise around right needle.",
+      "Pull loop through and slide old stitch off."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "yo",
+    "abbreviation": "yo",
+    "fullName": "Yarn Over",
+    "craft": "knitting",
+    "category": "increase",
+    "difficulty": "beginner",
+    "description": "Create an extra stitch and a deliberate hole, used in lace and eyelets.",
+    "steps": [
+      "Bring yarn to front between needles.",
+      "Knit next stitch \u2014 yarn wraps over needle creating a new loop."
+    ],
+    "also_known_as": [
+      "Yarn Forward (yfwd)",
+      "Yarn Round Needle (yrn)"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "k2tog",
+    "abbreviation": "k2tog",
+    "fullName": "Knit Two Together",
+    "craft": "knitting",
+    "category": "decrease",
+    "difficulty": "beginner",
+    "description": "Decrease one stitch by knitting two stitches as one. Leans right.",
+    "steps": [
+      "Insert right needle into next two stitches on left needle as if to knit.",
+      "Wrap yarn and knit them together.",
+      "Slide both old stitches off."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "ssk",
+    "abbreviation": "ssk",
+    "fullName": "Slip Slip Knit",
+    "craft": "knitting",
+    "category": "decrease",
+    "difficulty": "beginner",
+    "description": "Decrease one stitch. Leans left, mirrors k2tog.",
+    "steps": [
+      "Slip next stitch knitwise.",
+      "Slip next stitch knitwise.",
+      "Insert left needle into front of both slipped stitches.",
+      "Knit them together through back loops."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "sl",
+    "abbreviation": "sl",
+    "fullName": "Slip",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Move a stitch from left needle to right without working it.",
+    "steps": [
+      "Insert right needle into stitch as if to purl.",
+      "Slide stitch to right needle without wrapping yarn."
+    ],
+    "also_known_as": [
+      "sl st"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "psso",
+    "abbreviation": "psso",
+    "fullName": "Pass Slipped Stitch Over",
+    "craft": "knitting",
+    "category": "decrease",
+    "difficulty": "intermediate",
+    "description": "Decrease one stitch by passing a slipped stitch over a worked stitch.",
+    "steps": [
+      "Slip one stitch knitwise.",
+      "Knit the next stitch.",
+      "Use left needle to lift slipped stitch over knitted stitch and off needle."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "kfb",
+    "abbreviation": "kfb",
+    "fullName": "Knit Front and Back",
+    "craft": "knitting",
+    "category": "increase",
+    "difficulty": "beginner",
+    "description": "Increase one stitch by knitting into front and back of same stitch.",
+    "steps": [
+      "Knit into front of stitch but do not slide off.",
+      "Knit into back of same stitch.",
+      "Slide old stitch off \u2014 two new stitches created."
+    ],
+    "also_known_as": [
+      "Bar Increase"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "m1l",
+    "abbreviation": "M1L",
+    "fullName": "Make One Left",
+    "craft": "knitting",
+    "category": "increase",
+    "difficulty": "intermediate",
+    "description": "Increase one stitch leaning left. Nearly invisible.",
+    "steps": [
+      "Lift horizontal strand between stitches with left needle from front to back.",
+      "Knit into back of lifted strand."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "m1r",
+    "abbreviation": "M1R",
+    "fullName": "Make One Right",
+    "craft": "knitting",
+    "category": "increase",
+    "difficulty": "intermediate",
+    "description": "Increase one stitch leaning right. Nearly invisible.",
+    "steps": [
+      "Lift horizontal strand between stitches with left needle from back to front.",
+      "Knit into front of lifted strand."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "wt",
+    "abbreviation": "w&t",
+    "fullName": "Wrap and Turn",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Used in short rows to prevent holes. Wrap yarn around stitch before turning work.",
+    "steps": [
+      "Bring yarn to front.",
+      "Slip next stitch purlwise.",
+      "Move yarn to back.",
+      "Slip stitch back to left needle.",
+      "Turn work and continue knitting."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "pm",
+    "abbreviation": "pm",
+    "fullName": "Place Marker",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Place a stitch marker on the needle to mark a position.",
+    "steps": [
+      "Slide marker onto right needle."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "sm",
+    "abbreviation": "sm",
+    "fullName": "Slip Marker",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Move marker from left needle to right needle.",
+    "steps": [
+      "When you reach marker, slip it from left to right needle and continue."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "rm",
+    "abbreviation": "rm",
+    "fullName": "Remove Marker",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Take marker off needle.",
+    "steps": [
+      "Slide marker off needle."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "rs",
+    "abbreviation": "RS",
+    "fullName": "Right Side",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "The public, smooth side of the fabric (the side that faces out).",
+    "steps": [
+      "Work pattern as written for right side."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "ws",
+    "abbreviation": "WS",
+    "fullName": "Wrong Side",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "The private, bumpy side of the fabric (the side that faces in).",
+    "steps": [
+      "Work pattern as written for wrong side, often purling all stitches."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "cn",
+    "abbreviation": "cn",
+    "fullName": "Cable Needle",
+    "craft": "knitting",
+    "category": "cable",
+    "difficulty": "intermediate",
+    "description": "A short needle used to hold stitches temporarily while cabling.",
+    "steps": [
+      "Slip indicated stitches onto cable needle.",
+      "Hold cable needle at front or back of work as instructed.",
+      "Knit stitches from left needle, then from cable needle."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "c4f",
+    "abbreviation": "C4F",
+    "fullName": "Cable 4 Front",
+    "craft": "knitting",
+    "category": "cable",
+    "difficulty": "intermediate",
+    "description": "Cable crossing 4 stitches, holding first 2 at front. Stitches slant left.",
+    "steps": [
+      "Slip 2 stitches onto cable needle and hold at front.",
+      "Knit 2 stitches from left needle.",
+      "Knit 2 stitches from cable needle."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "c4b",
+    "abbreviation": "C4B",
+    "fullName": "Cable 4 Back",
+    "craft": "knitting",
+    "category": "cable",
+    "difficulty": "intermediate",
+    "description": "Cable crossing 4 stitches, holding first 2 at back. Stitches slant right.",
+    "steps": [
+      "Slip 2 stitches onto cable needle and hold at back.",
+      "Knit 2 stitches from left needle.",
+      "Knit 2 stitches from cable needle."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "rnd",
+    "abbreviation": "rnd",
+    "fullName": "Round",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "One complete circuit of stitches in circular knitting.",
+    "steps": [
+      "Work all stitches in the round from beginning-of-round marker back to marker."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "rep",
+    "abbreviation": "rep",
+    "fullName": "Repeat",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Work the specified sequence again.",
+    "steps": [
+      "Work the instructions between asterisks or brackets the number of times indicated."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "sts",
+    "abbreviation": "st(s)",
+    "fullName": "Stitch(es)",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "The basic unit of knitted fabric.",
+    "steps": [
+      "One loop on the needle."
+    ],
+    "also_known_as": [
+      "st"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "inc",
+    "abbreviation": "inc",
+    "fullName": "Increase",
+    "craft": "knitting",
+    "category": "increase",
+    "difficulty": "beginner",
+    "description": "Generic instruction to add one or more stitches.",
+    "steps": [
+      "Use specified increase method (kfb, M1L, yo, etc.)."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "dec",
+    "abbreviation": "dec",
+    "fullName": "Decrease",
+    "craft": "knitting",
+    "category": "decrease",
+    "difficulty": "beginner",
+    "description": "Generic instruction to remove one or more stitches.",
+    "steps": [
+      "Use specified decrease method (k2tog, ssk, p2tog, etc.)."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "tbl",
+    "abbreviation": "tbl",
+    "fullName": "Through Back Loop",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Work a stitch through its back leg instead of front, twisting the stitch.",
+    "steps": [
+      "Insert needle into back leg of stitch instead of front.",
+      "Work stitch as directed (knit or purl)."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "wyif",
+    "abbreviation": "wyif",
+    "fullName": "With Yarn In Front",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "Bring yarn to front of work before next stitch.",
+    "steps": [
+      "Move yarn between needles to front side of fabric."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "wyib",
+    "abbreviation": "wyib",
+    "fullName": "With Yarn In Back",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "Take yarn to back of work before next stitch.",
+    "steps": [
+      "Move yarn between needles to back side of fabric."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "k1tbl",
+    "abbreviation": "k1tbl",
+    "fullName": "Knit One Through Back Loop",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Knit a stitch through its back loop, creating a twisted stitch.",
+    "steps": [
+      "Insert right needle into back loop of stitch.",
+      "Wrap yarn and knit as usual."
+    ],
+    "also_known_as": [
+      "ktbl"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "p1tbl",
+    "abbreviation": "p1tbl",
+    "fullName": "Purl One Through Back Loop",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Purl a stitch through its back loop, creating a twisted stitch.",
+    "steps": [
+      "Bring yarn to front.",
+      "Insert right needle into back loop from left to right.",
+      "Purl as usual."
+    ],
+    "also_known_as": [
+      "ptbl"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "sk2p",
+    "abbreviation": "SK2P",
+    "fullName": "Slip Knit Two Together Pass Slipped Stitch Over",
+    "craft": "knitting",
+    "category": "decrease",
+    "difficulty": "intermediate",
+    "description": "Double decrease removing two stitches. Leans left.",
+    "steps": [
+      "Slip 1 stitch knitwise.",
+      "Knit 2 stitches together.",
+      "Pass slipped stitch over the k2tog."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "s2kp",
+    "abbreviation": "S2KP",
+    "fullName": "Slip Two Knit One Pass Slipped Stitches Over",
+    "craft": "knitting",
+    "category": "decrease",
+    "difficulty": "advanced",
+    "description": "Centred double decrease. Three stitches become one.",
+    "steps": [
+      "Slip 2 stitches together knitwise.",
+      "Knit 1 stitch.",
+      "Pass both slipped stitches over the knit stitch."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "cdd",
+    "abbreviation": "CDD",
+    "fullName": "Central Double Decrease",
+    "craft": "knitting",
+    "category": "decrease",
+    "difficulty": "intermediate",
+    "description": "Centred double decrease. Three stitches become one with centre stitch on top.",
+    "steps": [
+      "Slip 2 stitches together knitwise.",
+      "Knit 1 stitch.",
+      "Pass both slipped stitches over."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "ktbl",
+    "abbreviation": "ktbl",
+    "fullName": "Knit Through Back Loop",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Knit a stitch through its back loop.",
+    "steps": [
+      "Insert needle into back loop.",
+      "Knit stitch."
+    ],
+    "also_known_as": [
+      "k1tbl"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "skp",
+    "abbreviation": "skp",
+    "fullName": "Slip Knit Pass",
+    "craft": "knitting",
+    "category": "decrease",
+    "difficulty": "beginner",
+    "description": "Decrease one stitch leaning left.",
+    "steps": [
+      "Slip 1 stitch knitwise.",
+      "Knit 1 stitch.",
+      "Pass slipped stitch over knitted stitch."
+    ],
+    "also_known_as": [
+      "skpo",
+      "SKPO"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "k3tog",
+    "abbreviation": "k3tog",
+    "fullName": "Knit Three Together",
+    "craft": "knitting",
+    "category": "decrease",
+    "difficulty": "intermediate",
+    "description": "Decrease two stitches. Leans right.",
+    "steps": [
+      "Insert right needle into next 3 stitches as if to knit.",
+      "Knit all 3 together."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "p2tog",
+    "abbreviation": "p2tog",
+    "fullName": "Purl Two Together",
+    "craft": "knitting",
+    "category": "decrease",
+    "difficulty": "beginner",
+    "description": "Decrease one stitch on a purl row. Leans right on wrong side.",
+    "steps": [
+      "Insert right needle into next 2 stitches as if to purl.",
+      "Purl them together."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "p3tog",
+    "abbreviation": "p3tog",
+    "fullName": "Purl Three Together",
+    "craft": "knitting",
+    "category": "decrease",
+    "difficulty": "intermediate",
+    "description": "Decrease two stitches on a purl row.",
+    "steps": [
+      "Insert right needle into next 3 stitches as if to purl.",
+      "Purl them together."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "pfb",
+    "abbreviation": "pfb",
+    "fullName": "Purl Front and Back",
+    "craft": "knitting",
+    "category": "increase",
+    "difficulty": "intermediate",
+    "description": "Increase one stitch by purling into front and back.",
+    "steps": [
+      "Purl into front of stitch, do not slide off.",
+      "Purl into back of same stitch.",
+      "Slide old stitch off."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "lli",
+    "abbreviation": "LLI",
+    "fullName": "Left Lifted Increase",
+    "craft": "knitting",
+    "category": "increase",
+    "difficulty": "intermediate",
+    "description": "Nearly invisible increase leaning left.",
+    "steps": [
+      "Use left needle to pick up stitch two rows below last stitch on right needle.",
+      "Knit into picked-up stitch."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "rli",
+    "abbreviation": "RLI",
+    "fullName": "Right Lifted Increase",
+    "craft": "knitting",
+    "category": "increase",
+    "difficulty": "intermediate",
+    "description": "Nearly invisible increase leaning right.",
+    "steps": [
+      "Use right needle to pick up stitch below next stitch on left needle.",
+      "Place on left needle and knit."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "lri",
+    "abbreviation": "LRI",
+    "fullName": "Left Right Increase",
+    "craft": "knitting",
+    "category": "increase",
+    "difficulty": "intermediate",
+    "description": "Alternate name for some lifted increase methods.",
+    "steps": [
+      "Follow pattern instructions for specific lifted increase."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "rri",
+    "abbreviation": "RRI",
+    "fullName": "Right Right Increase",
+    "craft": "knitting",
+    "category": "increase",
+    "difficulty": "intermediate",
+    "description": "Alternate name for some lifted increase methods.",
+    "steps": [
+      "Follow pattern instructions for specific lifted increase."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "mb",
+    "abbreviation": "MB",
+    "fullName": "Make Bobble",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "advanced",
+    "description": "Create a small raised bump of stitches.",
+    "steps": [
+      "Into one stitch, work (k1, yo, k1, yo, k1) \u2014 5 stitches made.",
+      "Turn and purl 5.",
+      "Turn and knit 5.",
+      "Turn and purl 2 together three times.",
+      "Pass remaining stitches over first."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "pb",
+    "abbreviation": "PB",
+    "fullName": "Purl Bobble",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "advanced",
+    "description": "Create a bobble on a purl background.",
+    "steps": [
+      "Work bobble as for MB but beginning and ending with purl stitches."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "sl1k",
+    "abbreviation": "sl1k",
+    "fullName": "Slip One Knitwise",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Slip a stitch as if to knit.",
+    "steps": [
+      "Insert right needle into stitch as if to knit.",
+      "Slide to right needle without working."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "sl1p",
+    "abbreviation": "sl1p",
+    "fullName": "Slip One Purlwise",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Slip a stitch as if to purl.",
+    "steps": [
+      "Insert right needle into stitch as if to purl.",
+      "Slide to right needle without working."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "skpo",
+    "abbreviation": "SKPO",
+    "fullName": "Slip Knit Pass Over",
+    "craft": "knitting",
+    "category": "decrease",
+    "difficulty": "beginner",
+    "description": "Decrease one stitch. Same as skp.",
+    "steps": [
+      "Slip 1 knitwise.",
+      "Knit 1.",
+      "Pass slipped stitch over."
+    ],
+    "also_known_as": [
+      "skp"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "k1b",
+    "abbreviation": "k1b",
+    "fullName": "Knit One Below",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Knit into stitch below current one on needle, used in brioche.",
+    "steps": [
+      "Insert right needle into stitch directly below next stitch on left needle.",
+      "Knit as usual."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "p1b",
+    "abbreviation": "p1b",
+    "fullName": "Purl One Below",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Purl into stitch below current one on needle, used in brioche.",
+    "steps": [
+      "Bring yarn to front.",
+      "Insert right needle into stitch directly below next stitch.",
+      "Purl as usual."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "s1psso",
+    "abbreviation": "s1psso",
+    "fullName": "Slip One Pass Slipped Stitch Over",
+    "craft": "knitting",
+    "category": "decrease",
+    "difficulty": "intermediate",
+    "description": "Decrease one stitch.",
+    "steps": [
+      "Slip 1 knitwise.",
+      "Knit next stitch.",
+      "Pass slipped stitch over."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "kll",
+    "abbreviation": "KLL",
+    "fullName": "Knit Left Loop",
+    "craft": "knitting",
+    "category": "increase",
+    "difficulty": "intermediate",
+    "description": "Lifted increase leaning left.",
+    "steps": [
+      "Pick up left loop of stitch two rows below and knit."
+    ],
+    "also_known_as": [
+      "LLI"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "krl",
+    "abbreviation": "KRL",
+    "fullName": "Knit Right Loop",
+    "craft": "knitting",
+    "category": "increase",
+    "difficulty": "intermediate",
+    "description": "Lifted increase leaning right.",
+    "steps": [
+      "Pick up right loop of stitch below next stitch and knit."
+    ],
+    "also_known_as": [
+      "RLI"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "brk",
+    "abbreviation": "brk",
+    "fullName": "Brioche Knit",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "advanced",
+    "description": "Knit stitch together with its paired yarn over in brioche knitting.",
+    "steps": [
+      "Knit next stitch together with its yarn over."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "brp",
+    "abbreviation": "brp",
+    "fullName": "Brioche Purl",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "advanced",
+    "description": "Purl stitch together with its paired yarn over in brioche knitting.",
+    "steps": [
+      "Purl next stitch together with its yarn over."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "sl1wyif",
+    "abbreviation": "sl1wyif",
+    "fullName": "Slip One With Yarn In Front",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "Slip stitch with yarn held at front, creating a float.",
+    "steps": [
+      "Bring yarn to front.",
+      "Slip next stitch purlwise."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "sl1wyib",
+    "abbreviation": "sl1wyib",
+    "fullName": "Slip One With Yarn In Back",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "Slip stitch with yarn held at back.",
+    "steps": [
+      "Take yarn to back.",
+      "Slip next stitch purlwise."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "dpn",
+    "abbreviation": "dpn",
+    "fullName": "Double Pointed Needle",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "A short needle with points at both ends, used for small circumference knitting.",
+    "steps": [
+      "Distribute stitches evenly across 3 or 4 dpns.",
+      "Knit with a fifth needle."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "circ",
+    "abbreviation": "circ",
+    "fullName": "Circular Needle",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "Two short needle tips joined by a flexible cable.",
+    "steps": [
+      "Cast on stitches.",
+      "Join to work in the round, or use for flat knitting."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "gauge",
+    "abbreviation": "gauge",
+    "fullName": "Gauge",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "The number of stitches and rows per unit of measurement, determining fabric size.",
+    "steps": [
+      "Knit a swatch larger than 10cm/4in.",
+      "Wash and block as final project will be.",
+      "Measure stitches and rows in centre of swatch."
+    ],
+    "also_known_as": [
+      "tension"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "block",
+    "abbreviation": "block",
+    "fullName": "Block",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "Wet or steam finished knitting to even stitches and set shape.",
+    "steps": [
+      "Soak finished piece in lukewarm water.",
+      "Gently squeeze out water.",
+      "Lay flat on towel and pin to desired dimensions.",
+      "Allow to dry completely."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "frog",
+    "abbreviation": "frog",
+    "fullName": "Frog",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "Rip out knitting ('rip it, rip it').",
+    "steps": [
+      "Remove needles and pull yarn to unravel stitches."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "tink",
+    "abbreviation": "tink",
+    "fullName": "Tink",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "Undo knitting one stitch at a time ('knit' backwards).",
+    "steps": [
+      "Insert left needle into stitch below last worked stitch on right needle.",
+      "Gently pull working yarn to release stitch."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "selvedge",
+    "abbreviation": "selvedge",
+    "fullName": "Selvedge",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "The edge stitch of a piece.",
+    "steps": [
+      "Work first and last stitch of every row in a consistent manner for neat edges."
+    ],
+    "also_known_as": [
+      "selvage"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "garter",
+    "abbreviation": "garter",
+    "fullName": "Garter Stitch",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Fabric made by knitting every row. Creates ridges.",
+    "steps": [
+      "Knit all stitches on every row."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "stockinette",
+    "abbreviation": "stockinette",
+    "fullName": "Stockinette Stitch",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Smooth fabric: knit right side, purl wrong side.",
+    "steps": [
+      "Knit all stitches on right side rows.",
+      "Purl all stitches on wrong side rows."
+    ],
+    "also_known_as": [
+      "stocking stitch"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "seed",
+    "abbreviation": "seed",
+    "fullName": "Seed Stitch",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Textured fabric alternating knit and purl stitches.",
+    "steps": [
+      "Row 1: *K1, P1* repeat.",
+      "Row 2: *P1, K1* repeat.",
+      "Repeat these two rows."
+    ],
+    "also_known_as": [
+      "moss stitch"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "rib",
+    "abbreviation": "rib",
+    "fullName": "Ribbing",
+    "craft": "knitting",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Stretchy fabric with vertical columns, used for cuffs and edges.",
+    "steps": [
+      "Alternate knit and purl stitches (e.g., K1, P1 or K2, P2).",
+      "Work same pattern on every row."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "i-cord",
+    "abbreviation": "i-cord",
+    "fullName": "I-Cord",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "A narrow tube of knitting, used for straps and edges.",
+    "steps": [
+      "Cast on 3-5 stitches.",
+      "Knit all stitches.",
+      "Do not turn \u2014 slide stitches to other end of needle.",
+      "Bring yarn across back and knit again."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "kitchener",
+    "abbreviation": "Kitchener",
+    "fullName": "Kitchener Stitch",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "advanced",
+    "description": "Seamless grafting of live stitches together.",
+    "steps": [
+      "Thread tail onto tapestry needle.",
+      "Front needle: purl on, knit off.",
+      "Back needle: knit on, purl off.",
+      "Repeat until all stitches grafted."
+    ],
+    "also_known_as": [
+      "grafting"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "pickup",
+    "abbreviation": "pick up",
+    "fullName": "Pick Up Stitches",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Add new stitches by picking them up from an edge.",
+    "steps": [
+      "With right needle, insert into edge stitch.",
+      "Wrap yarn and pull up a new loop.",
+      "Repeat evenly along edge."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "mattress",
+    "abbreviation": "mattress",
+    "fullName": "Mattress Stitch",
+    "craft": "knitting",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Invisible vertical seam for stockinette fabric.",
+    "steps": [
+      "Thread yarn onto tapestry needle.",
+      "Weave under two bars between edge stitch and next stitch.",
+      "Alternate sides, pulling snug every few stitches."
+    ],
+    "also_known_as": [
+      "ladder stitch"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "s2k1psso",
+    "abbreviation": "s2k1psso",
+    "fullName": "Slip Two Knit One Pass Two Over",
+    "craft": "knitting",
+    "category": "decrease",
+    "difficulty": "advanced",
+    "description": "Double decrease. Three stitches become one.",
+    "steps": [
+      "Slip 2 stitches together knitwise.",
+      "Knit 1 stitch.",
+      "Pass both slipped stitches over knit stitch."
+    ],
+    "also_known_as": [
+      "S2KP"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "ch",
+    "abbreviation": "ch",
+    "fullName": "Chain",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "The foundation of crochet. Creates a starting row of loops.",
+    "steps": [
+      "Yarn over hook.",
+      "Pull through loop on hook."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "sl_st",
+    "abbreviation": "sl st",
+    "fullName": "Slip Stitch",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "The shortest crochet stitch. Used for joining, edging, and moving across fabric.",
+    "steps": [
+      "Insert hook into stitch.",
+      "Yarn over and pull through stitch and loop on hook."
+    ],
+    "also_known_as": [
+      "ss"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "sc",
+    "abbreviation": "sc",
+    "fullName": "Single Crochet",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "The shortest standard crochet stitch. Creates dense, firm fabric.",
+    "steps": [
+      "Insert hook into stitch.",
+      "Yarn over and pull up a loop (2 loops on hook).",
+      "Yarn over and pull through both loops."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": false
+  },
+  {
+    "id": "hdc",
+    "abbreviation": "hdc",
+    "fullName": "Half Double Crochet",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "A stitch between single and double crochet in height.",
+    "steps": [
+      "Yarn over.",
+      "Insert hook into stitch and pull up a loop (3 loops on hook).",
+      "Yarn over and pull through all 3 loops."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": false
+  },
+  {
+    "id": "dc",
+    "abbreviation": "dc",
+    "fullName": "Double Crochet",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "A common, versatile stitch twice the height of single crochet.",
+    "steps": [
+      "Yarn over.",
+      "Insert hook into stitch and pull up a loop (3 loops on hook).",
+      "Yarn over, pull through 2 loops.",
+      "Yarn over, pull through remaining 2 loops."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": false
+  },
+  {
+    "id": "tr",
+    "abbreviation": "tr",
+    "fullName": "Treble Crochet",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "intermediate",
+    "description": "A tall stitch, three times the height of single crochet.",
+    "steps": [
+      "Yarn over twice.",
+      "Insert hook into stitch and pull up a loop (4 loops on hook).",
+      "Yarn over, pull through 2 loops three times."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": false
+  },
+  {
+    "id": "dtr",
+    "abbreviation": "dtr",
+    "fullName": "Double Treble Crochet",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "intermediate",
+    "description": "A very tall stitch.",
+    "steps": [
+      "Yarn over three times.",
+      "Insert hook into stitch and pull up a loop.",
+      "Yarn over, pull through 2 loops four times."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": false
+  },
+  {
+    "id": "trtr",
+    "abbreviation": "trtr",
+    "fullName": "Triple Treble Crochet",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "advanced",
+    "description": "An extremely tall stitch.",
+    "steps": [
+      "Yarn over four times.",
+      "Insert hook into stitch and pull up a loop.",
+      "Yarn over, pull through 2 loops five times."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": false
+  },
+  {
+    "id": "inc",
+    "abbreviation": "inc",
+    "fullName": "Increase",
+    "craft": "crochet",
+    "category": "increase",
+    "difficulty": "beginner",
+    "description": "Work two stitches into one stitch to add stitches.",
+    "steps": [
+      "Work 2 specified stitches into same stitch."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "dec",
+    "abbreviation": "dec",
+    "fullName": "Decrease",
+    "craft": "crochet",
+    "category": "decrease",
+    "difficulty": "beginner",
+    "description": "Work two stitches together to reduce stitch count.",
+    "steps": [
+      "Work specified stitches together as one."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "mr",
+    "abbreviation": "MR",
+    "fullName": "Magic Ring",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "An adjustable loop for starting crochet in the round.",
+    "steps": [
+      "Wrap yarn around fingers to form a loop.",
+      "Insert hook into loop, yarn over and pull up.",
+      "Work stitches into ring.",
+      "Pull tail to close ring."
+    ],
+    "also_known_as": [
+      "magic circle",
+      "adjustable ring"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "fo",
+    "abbreviation": "FO",
+    "fullName": "Fasten Off",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Securely end crochet work.",
+    "steps": [
+      "Cut yarn leaving a tail.",
+      "Yarn over and pull tail completely through last loop.",
+      "Pull tight."
+    ],
+    "also_known_as": [
+      "cast off",
+      "bind off"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "blo",
+    "abbreviation": "BLO",
+    "fullName": "Back Loop Only",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "Work stitches into back loop only, creating a ridge.",
+    "steps": [
+      "Insert hook into back loop of stitch only.",
+      "Work stitch as usual."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "flo",
+    "abbreviation": "FLO",
+    "fullName": "Front Loop Only",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "Work stitches into front loop only, creating texture.",
+    "steps": [
+      "Insert hook into front loop of stitch only.",
+      "Work stitch as usual."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "fpdc",
+    "abbreviation": "FPdc",
+    "fullName": "Front Post Double Crochet",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Stitch worked around post from front, creating raised ridge.",
+    "steps": [
+      "Yarn over.",
+      "Insert hook from front to back around post of indicated stitch.",
+      "Complete as double crochet."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "bpdc",
+    "abbreviation": "BPdc",
+    "fullName": "Back Post Double Crochet",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Stitch worked around post from back, creating recessed ridge.",
+    "steps": [
+      "Yarn over.",
+      "Insert hook from back to front around post of indicated stitch.",
+      "Complete as double crochet."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "fpsc",
+    "abbreviation": "FPsc",
+    "fullName": "Front Post Single Crochet",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Short raised stitch worked from front around post.",
+    "steps": [
+      "Insert hook from front to back around post.",
+      "Complete as single crochet."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "bpsc",
+    "abbreviation": "BPsc",
+    "fullName": "Back Post Single Crochet",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Short recessed stitch worked from back around post.",
+    "steps": [
+      "Insert hook from back to front around post.",
+      "Complete as single crochet."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "ch_sp",
+    "abbreviation": "ch sp",
+    "fullName": "Chain Space",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "The space created by one or more chain stitches.",
+    "steps": [
+      "Work indicated stitch into the open space below chain stitches."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "join",
+    "abbreviation": "join",
+    "fullName": "Join",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Connect end of round to beginning with a slip stitch.",
+    "steps": [
+      "Insert hook into first stitch of round.",
+      "Yarn over and pull through all loops on hook."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "turn",
+    "abbreviation": "turn",
+    "fullName": "Turn",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Flip work to crochet in opposite direction.",
+    "steps": [
+      "Chain turning stitches as directed.",
+      "Turn work over and crochet next row in opposite direction."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "rnd",
+    "abbreviation": "rnd",
+    "fullName": "Round",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "One complete circuit of stitches in circular crochet.",
+    "steps": [
+      "Work all stitches from beginning marker back to marker."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "rep",
+    "abbreviation": "rep",
+    "fullName": "Repeat",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Work the specified sequence again.",
+    "steps": [
+      "Work instructions between asterisks or brackets the indicated number of times."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "sp",
+    "abbreviation": "sp",
+    "fullName": "Space",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "An open area between stitches.",
+    "steps": [
+      "Work indicated stitch into designated space."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "sk",
+    "abbreviation": "sk",
+    "fullName": "Skip",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Miss the specified number of stitches.",
+    "steps": [
+      "Do not work into next stitch(es); move to following stitch."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "yo",
+    "abbreviation": "yo",
+    "fullName": "Yarn Over",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Wrap yarn over hook, used in taller stitches and lace.",
+    "steps": [
+      "Wrap yarn from back to front over hook."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "pm",
+    "abbreviation": "pm",
+    "fullName": "Place Marker",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Mark a position in the round.",
+    "steps": [
+      "Place stitch marker in indicated stitch or space."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "sc2tog",
+    "abbreviation": "sc2tog",
+    "fullName": "Single Crochet Two Together",
+    "craft": "crochet",
+    "category": "decrease",
+    "difficulty": "beginner",
+    "description": "Decrease one stitch in single crochet.",
+    "steps": [
+      "Insert hook into stitch, pull up loop.",
+      "Insert hook into next stitch, pull up loop (3 loops on hook).",
+      "Yarn over, pull through all 3 loops."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "dc2tog",
+    "abbreviation": "dc2tog",
+    "fullName": "Double Crochet Two Together",
+    "craft": "crochet",
+    "category": "decrease",
+    "difficulty": "beginner",
+    "description": "Decrease one stitch in double crochet.",
+    "steps": [
+      "Yarn over, insert hook into stitch, pull up loop.",
+      "Yarn over, pull through 2 loops.",
+      "Yarn over, insert hook into next stitch, pull up loop.",
+      "Yarn over, pull through 2 loops.",
+      "Yarn over, pull through remaining 3 loops."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "hdc2tog",
+    "abbreviation": "hdc2tog",
+    "fullName": "Half Double Crochet Two Together",
+    "craft": "crochet",
+    "category": "decrease",
+    "difficulty": "beginner",
+    "description": "Decrease one stitch in half double crochet.",
+    "steps": [
+      "Yarn over, insert hook into stitch, pull up loop.",
+      "Yarn over, insert hook into next stitch, pull up loop.",
+      "Yarn over, pull through all 5 loops."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "inv_dec",
+    "abbreviation": "inv dec",
+    "fullName": "Invisible Decrease",
+    "craft": "crochet",
+    "category": "decrease",
+    "difficulty": "intermediate",
+    "description": "Neater decrease for amigurumi and tight fabric.",
+    "steps": [
+      "Insert hook into front loop only of next stitch.",
+      "Insert hook into front loop only of following stitch.",
+      "Yarn over and pull through 2 loops.",
+      "Yarn over and pull through 2 loops."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "shell",
+    "abbreviation": "shell",
+    "fullName": "Shell",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "A group of stitches worked into one stitch, creating a fan shape.",
+    "steps": [
+      "Work multiple stitches (usually 5 dc) into same stitch.",
+      "Skip stitches on either side as directed."
+    ],
+    "also_known_as": [
+      "fan"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "cluster",
+    "abbreviation": "cluster",
+    "fullName": "Cluster",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Stitches worked together but not completed until final yarn over.",
+    "steps": [
+      "Work specified stitches partially into adjacent stitches.",
+      "Yarn over and pull through all remaining loops together."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "bobble",
+    "abbreviation": "bobble",
+    "fullName": "Bobble",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "A raised, textured bump created by working multiple stitches into one.",
+    "steps": [
+      "Work (dc, yo, insert hook, pull up) 4-5 times in same stitch without completing.",
+      "Yarn over and pull through all loops on hook."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "puff",
+    "abbreviation": "puff",
+    "fullName": "Puff Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "A soft, rounded textured stitch.",
+    "steps": [
+      "Yarn over, insert hook and pull up a loop to height of stitch.",
+      "Repeat 2-3 more times in same stitch.",
+      "Yarn over and pull through all loops on hook."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "popcorn",
+    "abbreviation": "popcorn",
+    "fullName": "Popcorn Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "A raised, pinched textured stitch.",
+    "steps": [
+      "Work 5 dc into same stitch.",
+      "Remove hook from loop, insert into first dc of group.",
+      "Pull loop through and tighten."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "spike_sc",
+    "abbreviation": "spike sc",
+    "fullName": "Spike Single Crochet",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "A long single crochet worked into a row below, creating vertical bars.",
+    "steps": [
+      "Insert hook into stitch one or more rows below.",
+      "Pull up loop to current row height.",
+      "Complete as single crochet."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "waistcoat",
+    "abbreviation": "waistcoat st",
+    "fullName": "Waistcoat Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Also called centre single crochet. Creates knit-like V fabric.",
+    "steps": [
+      "Insert hook between the 'V' of the stitch below, under horizontal bar.",
+      "Complete as single crochet."
+    ],
+    "also_known_as": [
+      "centre single crochet",
+      "knit stitch"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "bean",
+    "abbreviation": "bean st",
+    "fullName": "Bean Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "A small, puffy textured stitch.",
+    "steps": [
+      "Insert hook, pull up loop.",
+      "Yarn over, insert hook, pull up loop.",
+      "Yarn over, pull through 4 loops.",
+      "Yarn over, pull through last 2 loops."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "v_stitch",
+    "abbreviation": "v-stitch",
+    "fullName": "V-Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "A decorative stitch creating V shapes.",
+    "steps": [
+      "Work (dc, ch 1, dc) into same stitch or space."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "x_stitch",
+    "abbreviation": "X-stitch",
+    "fullName": "X-Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Crossed stitches creating X shapes.",
+    "steps": [
+      "Skip stitch, work dc into next stitch.",
+      "Work dc into skipped stitch crossing over first dc."
+    ],
+    "also_known_as": [
+      "crossed stitch"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "crossed_dc",
+    "abbreviation": "crossed dc",
+    "fullName": "Crossed Double Crochet",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Two dc stitches that cross over each other.",
+    "steps": [
+      "Skip 1 stitch, dc in next.",
+      "Dc in skipped stitch, crossing behind first dc."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "bullion",
+    "abbreviation": "bullion st",
+    "fullName": "Bullion Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "advanced",
+    "description": "A coiled, rope-like decorative stitch.",
+    "steps": [
+      "Yarn over 7-10 times.",
+      "Insert hook into stitch and pull up loop.",
+      "Carefully pull through all loops on hook.",
+      "Yarn over and pull through final loop to secure."
+    ],
+    "also_known_as": [
+      "roll stitch",
+      "coil stitch"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "crocodile",
+    "abbreviation": "crocodile st",
+    "fullName": "Crocodile Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "advanced",
+    "description": "Scale-like textured stitch popular for dragon and mermaid designs.",
+    "steps": [
+      "Work a foundation of V-stitches.",
+      "Around first post of V, work 5 dc from top to bottom.",
+      "Around second post, work 5 dc from bottom to top.",
+      "Repeat around each V-stitch."
+    ],
+    "also_known_as": [
+      "scale stitch"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "broomstick",
+    "abbreviation": "broomstick lace",
+    "fullName": "Broomstick Lace",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "advanced",
+    "description": "A lacy, open stitch using a large dowel or broomstick.",
+    "steps": [
+      "Pull up loops onto a large dowel.",
+      "Slide groups of loops off and work stitches into them."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "hairpin",
+    "abbreviation": "hairpin lace",
+    "fullName": "Hairpin Lace",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "advanced",
+    "description": "A delicate, looped lace made on a hairpin loom.",
+    "steps": [
+      "Wrap yarn around hairpin loom.",
+      "Crochet centre strip connecting loops.",
+      "Remove from loom and join loops as directed."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "fsc",
+    "abbreviation": "fsc",
+    "fullName": "Foundation Single Crochet",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Create foundation chain and first row simultaneously.",
+    "steps": [
+      "Chain 2.",
+      "Insert hook into second chain from hook, pull up loop.",
+      "Yarn over, pull through 1 loop (chain made).",
+      "Yarn over, pull through 2 loops (sc made)."
+    ],
+    "also_known_as": [
+      "chainless foundation"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "fdc",
+    "abbreviation": "fdc",
+    "fullName": "Foundation Double Crochet",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Create foundation chain and first row of dc simultaneously.",
+    "steps": [
+      "Chain 3.",
+      "Yarn over, insert hook into 3rd chain, pull up loop.",
+      "Yarn over, pull through 1 loop.",
+      "Yarn over, pull through 2 loops twice."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "esc",
+    "abbreviation": "esc",
+    "fullName": "Extended Single Crochet",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "A slightly taller single crochet.",
+    "steps": [
+      "Insert hook into stitch, pull up loop.",
+      "Yarn over, pull through 1 loop.",
+      "Yarn over, pull through 2 loops."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "edc",
+    "abbreviation": "edc",
+    "fullName": "Extended Double Crochet",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "A slightly taller double crochet.",
+    "steps": [
+      "Yarn over, insert hook, pull up loop.",
+      "Yarn over, pull through 1 loop.",
+      "Yarn over, pull through 2 loops twice."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "split",
+    "abbreviation": "split sc",
+    "fullName": "Split Single Crochet",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Creates a dense, knit-like fabric.",
+    "steps": [
+      "Insert hook under horizontal bar at centre of stitch below.",
+      "Complete as single crochet."
+    ],
+    "also_known_as": [
+      "waistcoat stitch"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "picot",
+    "abbreviation": "picot",
+    "fullName": "Picot",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "A small decorative loop used in edgings.",
+    "steps": [
+      "Chain 3.",
+      "Slip stitch into first chain.",
+      "Continue working next stitch."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "surface",
+    "abbreviation": "surface sl st",
+    "fullName": "Surface Slip Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Work slip stitches on surface of fabric for decorative lines.",
+    "steps": [
+      "Insert hook from front to back through fabric.",
+      "Yarn over and pull to surface.",
+      "Insert hook into next position and slip stitch."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "crab",
+    "abbreviation": "crab st",
+    "fullName": "Crab Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Reverse single crochet creating a twisted cord edge.",
+    "steps": [
+      "Do not turn work.",
+      "Work single crochet from left to right (backwards)."
+    ],
+    "also_known_as": [
+      "reverse single crochet"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "block",
+    "abbreviation": "block",
+    "fullName": "Block",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "Shape and set finished crochet by wetting and pinning.",
+    "steps": [
+      "Wash or steam piece.",
+      "Pin to desired dimensions on blocking mat.",
+      "Allow to dry completely."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "frog",
+    "abbreviation": "frog",
+    "fullName": "Frog",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "Rip out crochet stitches ('rip it, rip it').",
+    "steps": [
+      "Remove hook and pull yarn to unravel stitches."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "tunisian_simple",
+    "abbreviation": "Tss",
+    "fullName": "Tunisian Simple Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Basic Tunisian crochet stitch creating a woven look.",
+    "steps": [
+      "Forward pass: Insert hook under front vertical bar, yarn over and pull up loop. Leave all loops on hook.",
+      "Return pass: Yarn over, pull through 1 loop, then yarn over and pull through 2 loops across."
+    ],
+    "also_known_as": [
+      "afghan stitch",
+      "Tss"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "tunisian_knit",
+    "abbreviation": "Tks",
+    "fullName": "Tunisian Knit Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Tunisian stitch that looks like knitting.",
+    "steps": [
+      "Insert hook between front and back vertical bars.",
+      "Yarn over and pull up loop."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "tunisian_purl",
+    "abbreviation": "Tps",
+    "fullName": "Tunisian Purl Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Tunisian stitch with a bump on the front.",
+    "steps": [
+      "Bring yarn to front of hook.",
+      "Insert hook under front vertical bar.",
+      "Yarn over and pull up loop."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": " Solomon",
+    "abbreviation": "Solomon's knot",
+    "fullName": "Solomon's Knot",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "advanced",
+    "description": "A lacy, open stitch creating long loops.",
+    "steps": [
+      "Draw up a long loop.",
+      "Yarn over and pull through.",
+      "Single crochet in loop to secure."
+    ],
+    "also_known_as": [
+      "lover's knot"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "loop",
+    "abbreviation": "loop st",
+    "fullName": "Loop Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Creates loops of yarn on fabric surface for texture.",
+    "steps": [
+      "Insert hook into stitch.",
+      "Wrap yarn around index finger.",
+      "Yarn over and pull through, leaving loop on surface."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "reverse_sc",
+    "abbreviation": "reverse sc",
+    "fullName": "Reverse Single Crochet",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Same as crab stitch \u2014 work backwards for twisted edge.",
+    "steps": [
+      "Do not turn.",
+      "Work sc from left to right."
+    ],
+    "also_known_as": [
+      "crab stitch"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "front_loop",
+    "abbreviation": "front loop",
+    "fullName": "Front Loop",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "The loop of the stitch closest to you.",
+    "steps": [
+      "Insert hook under front loop only."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "back_loop",
+    "abbreviation": "back loop",
+    "fullName": "Back Loop",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "The loop of the stitch farthest from you.",
+    "steps": [
+      "Insert hook under back loop only."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "post",
+    "abbreviation": "post",
+    "fullName": "Post",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "The vertical body of a stitch, worked around for texture.",
+    "steps": [
+      "Insert hook from front or back around post of indicated stitch."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "standing",
+    "abbreviation": "standing st",
+    "fullName": "Standing Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Start a new round or colour without a slip stitch join.",
+    "steps": [
+      "Pull up loop to height of stitch.",
+      "Yarn over and work stitch as usual."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "magic_circle",
+    "abbreviation": "magic circle",
+    "fullName": "Magic Circle",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Alternative name for magic ring.",
+    "steps": [
+      "See Magic Ring (MR) instructions."
+    ],
+    "also_known_as": [
+      "MR",
+      "magic ring"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "yarn_tail",
+    "abbreviation": "yarn tail",
+    "fullName": "Yarn Tail",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "The loose end of yarn left after fastening off.",
+    "steps": [
+      "Weave tail into fabric with tapestry needle to hide."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "tapestry",
+    "abbreviation": "tapestry",
+    "fullName": "Tapestry Crochet",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "advanced",
+    "description": "Working with multiple colours, carrying unused yarn across back.",
+    "steps": [
+      "Work over unused colour as you crochet.",
+      "Switch colours as directed by pattern."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "overlay",
+    "abbreviation": "overlay",
+    "fullName": "Overlay Crochet",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "advanced",
+    "description": "Creating textured patterns by working around post stitches.",
+    "steps": [
+      "Work post stitches around stitches from previous rows.",
+      "Build up layered texture."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "filet",
+    "abbreviation": "filet",
+    "fullName": "Filet Crochet",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Open mesh fabric creating pictures and patterns.",
+    "steps": [
+      "Work blocks of dc and empty mesh spaces (ch-2, skip 2).",
+      "Follow chart for pattern."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "corner2corner",
+    "abbreviation": "C2C",
+    "fullName": "Corner to Corner",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "Diagonal box stitch worked from one corner to opposite.",
+    "steps": [
+      "Work blocks of 3 dc in a diagonal direction.",
+      "Increase at beginning of row, decrease at end."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "moss",
+    "abbreviation": "moss st",
+    "fullName": "Moss Stitch",
+    "craft": "crochet",
+    "category": "basic",
+    "difficulty": "beginner",
+    "description": "Alternating sc and ch-1 creating open, textured fabric.",
+    "steps": [
+      "Row 1: Sc in 2nd ch from hook, *ch 1, skip 1, sc in next* repeat.",
+      "Row 2: Sc in ch-1 space, *ch 1, sc in next ch-1 space* repeat."
+    ],
+    "also_known_as": [
+      "granite stitch",
+      "linen stitch"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "granny",
+    "abbreviation": "granny",
+    "fullName": "Granny Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "beginner",
+    "description": "Classic clusters of 3 dc separated by chains.",
+    "steps": [
+      "Work 3 dc, ch 2, 3 dc into same space.",
+      "Skip stitches and repeat in next space."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "cluster_v",
+    "abbreviation": "cluster v-st",
+    "fullName": "Cluster V-Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "A V-stitch made with incomplete dc clusters.",
+    "steps": [
+      "Work partial dc into same stitch twice.",
+      "Yarn over and pull through all loops.",
+      "Chain 1, repeat in same stitch."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "puff_v",
+    "abbreviation": "puff v-st",
+    "fullName": "Puff V-Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "A V-stitch made with puff stitches.",
+    "steps": [
+      "Work puff stitch, ch 1, puff stitch in same space."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "star",
+    "abbreviation": "star st",
+    "fullName": "Star Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "A textured stitch creating star or flower shapes.",
+    "steps": [
+      "Pull up loops in next 5 stitches or spaces.",
+      "Yarn over and pull through all 6 loops.",
+      "Chain 1 to close (eye)."
+    ],
+    "also_known_as": [
+      "Marguerite stitch"
+    ],
+    "usRegion": true,
+    "ukRegion": true
+  },
+  {
+    "id": "jasmine",
+    "abbreviation": "jasmine st",
+    "fullName": "Jasmine Stitch",
+    "craft": "crochet",
+    "category": "special",
+    "difficulty": "intermediate",
+    "description": "A puffy, textured petal-like stitch.",
+    "steps": [
+      "Pull up 3 loops in same stitch to height of dc.",
+      "Yarn over, pull through 4 loops.",
+      "Chain to close."
+    ],
+    "also_known_as": [],
+    "usRegion": true,
+    "ukRegion": true
+  }
+]

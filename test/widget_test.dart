@@ -63,11 +63,14 @@ void main() {
       await tester.pumpWidget(
         const ProviderScope(child: StitchMateApp()),
       );
-      await tester.pumpAndSettle();
+      // Initial pump to build, then pump for async dictionary load.
+      await tester.pump();
+      await tester.pump(const Duration(seconds: 1));
 
       // Tap Projects tab
       await tester.tap(find.text('Projects'));
-      await tester.pumpAndSettle();
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 300));
 
       // ProjectsScreen now shows the real project list UI.
       // The AppBar title and nav label both show 'Projects', so use find.textNatively.
@@ -75,9 +78,11 @@ void main() {
 
       // Tap Dictionary tab
       await tester.tap(find.text('Dictionary'));
-      await tester.pumpAndSettle();
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 300));
 
-      expect(find.text('Dictionary Screen — Sprint 3'), findsOneWidget);
+      // DictionaryScreen shows search hint and title.
+      expect(find.text('Stitch Dictionary'), findsWidgets);
     });
   });
 }

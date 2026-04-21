@@ -104,3 +104,61 @@
 - Status dropdown in `ProjectDetailScreen` AppBar allows one-tap status changes; completed/frogged statuses auto-set endDate
 - Notes and Photos tabs are read-only placeholders for Sprint 7 (Settings & Polish) when full editing will be implemented
 - Counter reminder and target progress are computed from counter state in the widget — no separate state needed
+
+---
+
+## Sprint 3 — Stitch Dictionary
+
+### 2026-04-22
+**Completed:**
+- Created `assets/data/stitches.json` with **152 entries** (74 knitting, 78 crochet) — exceeds 60+ target per craft
+  - All entries follow exact PDR Section 13 schema: id, abbreviation, fullName, craft, category, difficulty, description, steps, also_known_as, usRegion, ukRegion
+  - Categories: basic, increase, decrease, cable, lace, special
+  - Difficulty levels: beginner, intermediate, advanced
+  - **Flagged for human verification** per Harness Section 7 — data accuracy critical for user craft work
+- Created `StitchEntry` model (`lib/data/models/stitch_entry.dart`):
+  - Plain Dart class (no Hive — static JSON), `fromJson`/`toJson`, `matchesQuery()` for search
+  - Helper constants: `StitchCraft`, `StitchCategory`, `StitchDifficulty`
+- Created `StitchDictionaryNotifier` (`lib/features/dictionary/dictionary_provider.dart`):
+  - Loads JSON from assets once at startup via `rootBundle`, keeps in memory
+  - In-memory filtering for instant search response (no async I/O on keystrokes)
+  - Search by abbreviation, full name, or also-known-as aliases
+  - Craft filter: All / Knitting / Crochet via `SegmentedButton`
+  - Category filter: Basic, Increases, Decreases, Cables, Lace, Special via `FilterChip`s
+  - `getEntryById()` for detail screen lookups
+- Created `FavouritesNotifier` (`lib/features/dictionary/favourites_provider.dart`):
+  - Hive-backed persistence to `dictionaryBox` with `_hiveKey = 'stitch_favourites'`
+  - **Pro-gated**: free tier can read favourites but not add/remove — returns false, shows Pro dialog
+  - `toggleFavourite()`, `addFavourite()`, `removeFavourite()` all check `proStatusProvider`
+- Built `DictionaryScreen` (`lib/features/dictionary/screens/dictionary_screen.dart`):
+  - Search field in AppBar bottom with real-time filtering
+  - SegmentedButton for craft filter (All / Knitting / Crochet)
+  - Horizontal scrollable category FilterChips
+  - ListView with `CircleAvatar` showing abbreviation, title, full name, favourite star indicator
+  - Empty state with icon and 'No results found' message
+  - Error state for JSON load failures
+  - Tap navigates to detail screen via `context.push('/dictionary/detail')`
+- Built `StitchDetailScreen` (`lib/features/dictionary/screens/stitch_detail_screen.dart`):
+  - Header card: full name, craft chip, category chip (colour-coded), difficulty chip
+  - Description section
+  - Numbered step-by-step instructions with circular step indicators
+  - 'Also known as' aliases as Chips
+  - US/UK region indicator flags
+  - Favourite toggle star in AppBar (Pro-gated)
+- Added detail route to go_router (`/dictionary/detail`)
+- **Unit tests**: 19 tests for StitchEntry model, StitchDictionaryState, FavouritesState, FavouritesNotifier
+- **Widget tests**: 16 tests for DictionaryScreen and StitchDetailScreen
+- All tests pass (112 total), `flutter analyze` zero issues, code formatted
+
+**In Progress:**
+- None
+
+**Next Session:**
+- Begin Sprint 4: Yarn Stash Manager (Yarn CRUD, colour swatch, link to project, 'enough yarn?' calc)
+
+**Issues / Decisions Made:**
+- `SegmentedButton.styleFrom` does not exist in Flutter 3.16.9 — used `selectedIcon` parameter instead
+- Dictionary JSON load is async via `rootBundle.loadString()` — widget tests must use `pump()` with duration instead of `pumpAndSettle()` to avoid timeout, or override provider with pre-loaded state
+- Widget tests use `GoRouter` wrapper for navigation tests to avoid 'No GoRouter found in context' errors
+- Search uses `matchesQuery()` which checks abbreviation, fullName, and alsoKnownAs — case-insensitive
+- Category colours are hardcoded (green for increase, red for decrease, etc.) because they carry semantic meaning beyond the theme — this is intentional and paired with category labels
