@@ -4,6 +4,8 @@ import 'dart:io';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
 
+import '../models/counter_adapter.dart';
+
 /// Hive initialisation and box management.
 ///
 /// Boxes are opened lazily — only required boxes are initialised at startup
@@ -38,11 +40,8 @@ class HiveInit {
       await Hive.initFlutter();
     }
 
-    // TODO: Register Hive adapters here as models are created.
-    // Example:
-    // Hive.registerAdapter(ProjectAdapter());
-    // Hive.registerAdapter(CounterAdapter());
-    // Hive.registerAdapter(YarnAdapter());
+    // Register Hive adapters.
+    Hive.registerAdapter(CounterAdapter());
 
     // Open critical boxes immediately (required for app launch).
     _settingsBox = await Hive.openBox<dynamic>(_settingsBoxName);
