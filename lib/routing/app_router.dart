@@ -5,6 +5,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../core/strings.dart';
 import '../features/counter/screens/counter_screen.dart';
 import '../features/projects/screens/projects_screen.dart';
+import '../features/projects/screens/new_project_screen.dart';
+import '../features/projects/screens/project_detail_screen.dart';
+import '../features/projects/screens/edit_project_screen.dart';
 import '../features/dictionary/screens/dictionary_screen.dart';
 import '../features/stash/screens/stash_screen.dart';
 import '../features/calculator/screens/calculator_screen.dart';
@@ -46,6 +49,36 @@ final appRouterProvider = Provider<GoRouter>((ref) {
               GoRoute(
                 path: '/projects',
                 builder: (context, state) => const ProjectsScreen(),
+                routes: <RouteBase>[
+                  GoRoute(
+                    path: 'new',
+                    builder: (context, state) => const NewProjectScreen(),
+                  ),
+                  GoRoute(
+                    path: 'detail',
+                    builder: (context, state) {
+                      final projectId = state.extra as String?;
+                      if (projectId == null) {
+                        return const Scaffold(
+                          body: Center(child: Text('No project selected')),
+                        );
+                      }
+                      return ProjectDetailScreen(projectId: projectId);
+                    },
+                  ),
+                  GoRoute(
+                    path: 'edit',
+                    builder: (context, state) {
+                      final projectId = state.extra as String?;
+                      if (projectId == null) {
+                        return const Scaffold(
+                          body: Center(child: Text('No project selected')),
+                        );
+                      }
+                      return EditProjectScreen(projectId: projectId);
+                    },
+                  ),
+                ],
               ),
             ],
           ),

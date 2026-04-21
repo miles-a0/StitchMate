@@ -40,6 +40,10 @@ class AppStrings {
   static const String counterReminder = 'Reminder';
   static const String counterReminderEvery = 'Every';
   static const String counterRows = 'rows';
+  static const String counterResetConfirm =
+      'Are you sure you want to reset the counter to 0?';
+  static const String counterCurrentValue = 'Current value';
+  static const String counterSwipeHint = 'Swipe down on button';
   static const String counterHapticsOn = 'Haptics On';
   static const String counterHapticsOff = 'Haptics Off';
   static const String counterSoundOn = 'Sound On';

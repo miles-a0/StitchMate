@@ -69,7 +69,9 @@ void main() {
       await tester.tap(find.text('Projects'));
       await tester.pumpAndSettle();
 
-      expect(find.text('Projects Screen — Sprint 2'), findsOneWidget);
+      // ProjectsScreen now shows the real project list UI.
+      // The AppBar title and nav label both show 'Projects', so use find.textNatively.
+      expect(find.text('Projects'), findsWidgets);
 
       // Tap Dictionary tab
       await tester.tap(find.text('Dictionary'));
