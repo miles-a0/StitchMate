@@ -162,3 +162,56 @@
 - Widget tests use `GoRouter` wrapper for navigation tests to avoid 'No GoRouter found in context' errors
 - Search uses `matchesQuery()` which checks abbreviation, fullName, and alsoKnownAs — case-insensitive
 - Category colours are hardcoded (green for increase, red for decrease, etc.) because they carry semantic meaning beyond the theme — this is intentional and paired with category labels
+
+---
+
+## Sprint 4 — Yarn Stash Manager
+
+### 2026-04-22
+**Completed:**
+- Created `Yarn` Hive model (`lib/data/models/yarn.dart`) with `typeId: 3`:
+  - Fields: id, brand, colourName, weight, fibre, yardagePerSkein, metreagePerSkein, gramsPerSkein, skeinCount, hexColour, notes, purchaseLocation, status, linkedProjectIds
+  - Computed getters: `totalYardage`, `totalMetreage`, `totalGrams`
+  - `linkToProject()` / `unlinkFromProject()` with automatic status management
+  - `YarnWeight` and `YarnStatus` constant classes with labels
+- Created `YarnAdapter` (`lib/data/models/yarn_adapter.dart`) — manual TypeAdapter, registered in `HiveInit`
+- Created `YarnNotifier` (`lib/features/stash/stash_provider.dart`):
+  - CRUD: `createYarn`, `updateYarn`, `deleteYarn`, `updateStatus`
+  - Project linking: `linkToProject`, `unlinkFromProject`
+  - Search by brand/colour/fibre, filter by weight, filter by status
+  - `hasEnoughYarn()` and `calculateSkeinsNeeded()` for yardage calculator
+  - Hive persistence on every mutation
+- Built `StashScreen` (`lib/features/stash/screens/stash_screen.dart`):
+  - Search field in AppBar bottom
+  - Horizontal scrollable weight and status FilterChips
+  - ListView with colour swatch, brand+colour, weight+fibre, skein count, status badge
+  - Empty state with icon and prompt
+  - FAB for adding new yarn
+- Built `NewYarnScreen` (`lib/features/stash/screens/new_yarn_screen.dart`):
+  - Colour picker with 23 preset colours in circular swatches
+  - Form fields: brand, colour name, weight dropdown, fibre, yardage/metreage, grams/skein count, purchase location, notes
+  - Validation on all required fields
+- Built `YarnDetailScreen` (`lib/features/stash/screens/yarn_detail_screen.dart`):
+  - Header card with large colour swatch and yarn info
+  - Stats grid: total yards, total metres, total grams
+  - Status dropdown (Available / In Use / Used Up)
+  - "Do I have enough?" calculator with yardage input, calculate button, coloured result
+  - Notes and purchase location display
+  - Edit and delete buttons in AppBar
+- Built `EditYarnScreen` (`lib/features/stash/screens/edit_yarn_screen.dart`) — reuses NewYarn form pattern with pre-populated fields
+- Added stash routes to go_router: `/stash/new`, `/stash/detail`, `/stash/edit`
+- **Unit tests**: 23 tests for Yarn model, YarnState, YarnNotifier (CRUD, filters, calculator, project links)
+- **Widget tests**: 15 tests for StashScreen and YarnDetailScreen
+- All tests pass (201 total), `flutter analyze` zero issues, code formatted
+
+**In Progress:**
+- None
+
+**Next Session:**
+- Begin Sprint 5: Project Timer (start/pause/stop, background notification, session history)
+
+**Issues / Decisions Made:**
+- Colour swatches use hardcoded hex values in a preset palette — user can select from 23 colours; custom hex input deferred to Sprint 7
+- Status colours (green/orange/red) are hardcoded for semantic clarity
+- `ensureVisible()` required in widget tests for horizontally scrolling filter chips before tapping
+- Yarn linking to projects updates status automatically (Available -> In Use, In Use -> Available when unlinked)

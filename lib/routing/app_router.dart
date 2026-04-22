@@ -11,6 +11,9 @@ import '../features/projects/screens/edit_project_screen.dart';
 import '../features/dictionary/screens/dictionary_screen.dart';
 import '../features/dictionary/screens/stitch_detail_screen.dart';
 import '../features/stash/screens/stash_screen.dart';
+import '../features/stash/screens/new_yarn_screen.dart';
+import '../features/stash/screens/yarn_detail_screen.dart';
+import '../features/stash/screens/edit_yarn_screen.dart';
 import '../features/calculator/screens/calculator_screen.dart';
 
 /// go_router configuration for StitchMate.
@@ -112,6 +115,36 @@ final appRouterProvider = Provider<GoRouter>((ref) {
               GoRoute(
                 path: '/stash',
                 builder: (context, state) => const StashScreen(),
+                routes: <RouteBase>[
+                  GoRoute(
+                    path: 'new',
+                    builder: (context, state) => const NewYarnScreen(),
+                  ),
+                  GoRoute(
+                    path: 'detail',
+                    builder: (context, state) {
+                      final yarnId = state.extra as String?;
+                      if (yarnId == null) {
+                        return const Scaffold(
+                          body: Center(child: Text('No yarn selected')),
+                        );
+                      }
+                      return YarnDetailScreen(yarnId: yarnId);
+                    },
+                  ),
+                  GoRoute(
+                    path: 'edit',
+                    builder: (context, state) {
+                      final yarnId = state.extra as String?;
+                      if (yarnId == null) {
+                        return const Scaffold(
+                          body: Center(child: Text('No yarn selected')),
+                        );
+                      }
+                      return EditYarnScreen(yarnId: yarnId);
+                    },
+                  ),
+                ],
               ),
             ],
           ),
