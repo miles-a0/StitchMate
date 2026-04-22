@@ -20,6 +20,8 @@ import '../features/calculator/screens/wpi_calculator_screen.dart';
 import '../features/calculator/screens/needle_chart_screen.dart';
 import '../features/calculator/screens/yarn_weight_guide_screen.dart';
 import '../features/settings/screens/settings_screen.dart';
+import '../features/settings/screens/data_export_import_screen.dart';
+import '../features/settings/screens/privacy_policy_screen.dart';
 
 /// go_router configuration for StitchMate.
 ///
@@ -179,6 +181,18 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                   GoRoute(
                     path: 'settings',
                     builder: (context, state) => const SettingsScreen(),
+                    routes: <RouteBase>[
+                      GoRoute(
+                        path: 'export',
+                        builder: (context, state) =>
+                            const DataExportImportScreen(),
+                      ),
+                      GoRoute(
+                        path: 'privacy',
+                        builder: (context, state) =>
+                            const PrivacyPolicyScreen(),
+                      ),
+                    ],
                   ),
                 ],
               ),

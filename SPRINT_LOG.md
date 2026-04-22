@@ -354,3 +354,43 @@
 - `SharedPreferences.getInstance()` can throw in test environment — all calls wrapped in try/catch
 - Accent colour picker is visible to all users but will be Pro-gated in a future update when purchase flow is implemented
 - Counter sound provider changed from `bool` to `CounterSound` enum to support 3 states (off/soft/loud)
+
+---
+
+## Sprint 8 — QA & Release Prep
+
+### 2026-04-22
+**Completed:**
+- Built `DataExportImportScreen` (`lib/features/settings/screens/data_export_import_screen.dart`):
+  - Export: collects all Hive data (counters, projects, yarn, timer sessions), serialises to JSON, shares via `share_plus`
+  - Import: placeholder UI with instructions (full file picker import deferred to post-MVP)
+  - Styled info cards with icons and descriptions
+- Built `PrivacyPolicyScreen` (`lib/features/settings/screens/privacy_policy_screen.dart`):
+  - 6 sections: Data Collection, Data Storage, Data Export, Permissions, Third-Party Services, Contact
+  - Scrollable, themed layout matching app design
+- Updated `SettingsScreen`:
+  - Added Data section with Export and Import list tiles
+  - Added Privacy Policy list tile in About section
+- Updated go_router with `/tools/settings/export` and `/tools/settings/privacy` routes
+- Updated `README.md` with comprehensive project documentation:
+  - Full feature list with descriptions
+  - Tech stack table
+  - Getting started instructions
+  - Project structure diagram
+  - Architecture principles
+  - Testing stats (244 tests)
+  - Acknowledgements
+- **Widget tests**: 5 tests for DataExportImportScreen and PrivacyPolicyScreen
+- All tests pass (244 total), `flutter analyze` zero issues, code formatted
+
+**In Progress:**
+- None
+
+**Next Session:**
+- Project complete! All 9 sprints finished. Ready for device testing and store submission.
+
+**Issues / Decisions Made:**
+- `Icons.download_file` does not exist in Flutter 3.16.9 — used `Icons.download` instead
+- Import functionality uses a placeholder message because `file_picker` is not in pubspec and adding new packages at this stage risks compatibility issues
+- Export uses `getTemporaryDirectory()` + `Share.shareXFiles()` which works on both iOS and Android
+- All 244 tests pass across 12 test files covering every feature

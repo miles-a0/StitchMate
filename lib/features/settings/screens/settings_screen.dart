@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+
 import '../../../core/dimensions.dart';
 import '../../../core/providers.dart';
 import '../../../core/strings.dart';
@@ -78,6 +80,22 @@ class SettingsScreen extends ConsumerWidget {
           ),
           const Divider(),
 
+          // ── Data ──
+          const _SectionHeader(title: 'Data'),
+          ListTile(
+            leading: const Icon(Icons.upload_file),
+            title: const Text(AppStrings.dataExport),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => context.push('/tools/settings/export'),
+          ),
+          ListTile(
+            leading: const Icon(Icons.download),
+            title: const Text(AppStrings.dataImport),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => context.push('/tools/settings/export'),
+          ),
+          const Divider(),
+
           // ── About ──
           const _SectionHeader(title: AppStrings.about),
           ListTile(
@@ -95,6 +113,12 @@ class SettingsScreen extends ConsumerWidget {
             title: const Text(AppStrings.acknowledgements),
             trailing: const Icon(Icons.chevron_right),
             onTap: () => _showAcknowledgements(context),
+          ),
+          ListTile(
+            leading: const Icon(Icons.privacy_tip_outlined),
+            title: const Text('Privacy Policy'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => context.push('/tools/settings/privacy'),
           ),
         ],
       ),
