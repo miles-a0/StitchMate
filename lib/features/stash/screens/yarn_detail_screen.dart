@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -69,6 +71,12 @@ class _YarnDetailScreenState extends ConsumerState<YarnDetailScreen> {
             _HeaderCard(yarn: yarn),
 
             const SizedBox(height: AppDimensions.spacingLG),
+
+            // Photos gallery.
+            if (yarn.photoUris.isNotEmpty) ...<Widget>[
+              _PhotosGallery(photos: yarn.photoUris),
+              const SizedBox(height: AppDimensions.spacingLG),
+            ],
 
             // Stats grid.
             _StatsGrid(yarn: yarn),
@@ -377,6 +385,50 @@ class _StatusSection extends ConsumerWidget {
       default:
         return status;
     }
+  }
+}
+
+/// Photos gallery widget.
+class _PhotosGallery extends StatelessWidget {
+  const _PhotosGallery({required this.photos});
+
+  final List<String> photos;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          'Photos',
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+        ),
+        const SizedBox(height: AppDimensions.spacingSM),
+        SizedBox(
+          height: 120,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: photos.length,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.only(right: AppDimensions.spacingSM),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(AppDimensions.radiusMD),
+                  child: Image.file(
+                    File(photos[index]),
+                    width: 120,
+                    height: 120,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              );
+            },
+          ),
+        ),
+      ],
+    );
   }
 }
 

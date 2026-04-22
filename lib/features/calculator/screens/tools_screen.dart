@@ -41,10 +41,16 @@ class ToolsScreen extends StatelessWidget {
         colourIndex: 3,
       ),
       const _ToolItem(
+        icon: Icons.picture_as_pdf,
+        label: 'Pattern Viewer',
+        route: '/tools/pdf',
+        colourIndex: 4,
+      ),
+      const _ToolItem(
         icon: Icons.settings_outlined,
         label: AppStrings.settingsTitle,
         route: '/tools/settings',
-        colourIndex: 4,
+        colourIndex: 5,
       ),
     ];
 
@@ -111,6 +117,7 @@ class _ToolCard extends StatelessWidget {
       colorScheme.secondary,
       colorScheme.tertiary,
       colorScheme.primary.withOpacity(0.8),
+      colorScheme.error,
       colorScheme.outline,
     ];
 
@@ -119,6 +126,7 @@ class _ToolCard extends StatelessWidget {
       colorScheme.secondaryContainer,
       colorScheme.tertiaryContainer,
       colorScheme.primaryContainer.withOpacity(0.6),
+      colorScheme.errorContainer,
       colorScheme.surfaceVariant,
     ];
 

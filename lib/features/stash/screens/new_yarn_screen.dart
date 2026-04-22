@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../../../core/dimensions.dart';
 import '../../../core/strings.dart';
@@ -33,6 +36,7 @@ class _NewYarnScreenState extends ConsumerState<NewYarnScreen> {
 
   String _selectedWeight = YarnWeight.worsted;
   String _hexColour = '#7B3F6E';
+  final List<String> _photoPaths = <String>[];
 
   @override
   void dispose() {
@@ -230,6 +234,15 @@ class _NewYarnScreenState extends ConsumerState<NewYarnScreen> {
             ),
             const SizedBox(height: AppDimensions.spacingMD),
 
+            // Photos.
+            _PhotoPicker(
+              photoPaths: _photoPaths,
+              onPhotoAdded: (path) => setState(() => _photoPaths.add(path)),
+              onPhotoRemoved: (path) =>
+                  setState(() => _photoPaths.remove(path)),
+            ),
+            const SizedBox(height: AppDimensions.spacingMD),
+
             // Notes.
             TextFormField(
               controller: _notesController,
@@ -269,6 +282,7 @@ class _NewYarnScreenState extends ConsumerState<NewYarnScreen> {
           purchaseLocation: _purchaseLocationController.text.trim().isEmpty
               ? null
               : _purchaseLocationController.text.trim(),
+          photoUris: _photoPaths,
         );
 
     context.pop();
@@ -382,5 +396,118 @@ class _ColourPicker extends StatelessWidget {
     } catch (_) {
       return Colors.grey;
     }
+  }
+}
+
+/// Photo picker for yarn images.
+class _PhotoPicker extends StatelessWidget {
+  const _PhotoPicker({
+    required this.photoPaths,
+    required this.onPhotoAdded,
+    required this.onPhotoRemoved,
+  });
+
+  final List<String> photoPaths;
+  final ValueChanged<String> onPhotoAdded;
+  final ValueChanged<String> onPhotoRemoved;
+
+  Future<void> _pickImage(BuildContext context) async {
+    final picker = ImagePicker();
+    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
+    if (pickedFile != null) {
+      onPhotoAdded(pickedFile.path);
+    }
+  }
+
+  Future<void> _takePhoto(BuildContext context) async {
+    final picker = ImagePicker();
+    final pickedFile = await picker.pickImage(source: ImageSource.camera);
+    if (pickedFile != null) {
+      onPhotoAdded(pickedFile.path);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          'Photos',
+          style: theme.textTheme.titleMedium,
+        ),
+        const SizedBox(height: AppDimensions.spacingSM),
+        if (photoPaths.isNotEmpty)
+          SizedBox(
+            height: 100,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: photoPaths.length,
+              itemBuilder: (context, index) {
+                final path = photoPaths[index];
+                return Padding(
+                  padding:
+                      const EdgeInsets.only(right: AppDimensions.spacingSM),
+                  child: Stack(
+                    children: <Widget>[
+                      ClipRRect(
+                        borderRadius:
+                            BorderRadius.circular(AppDimensions.radiusMD),
+                        child: Image.file(
+                          File(path),
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Positioned(
+                        top: 4,
+                        right: 4,
+                        child: InkWell(
+                          onTap: () => onPhotoRemoved(path),
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              color: Colors.black54,
+                              shape: BoxShape.circle,
+                            ),
+                            child: const Icon(
+                              Icons.close,
+                              color: Colors.white,
+                              size: 18,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ),
+        if (photoPaths.isNotEmpty)
+          const SizedBox(height: AppDimensions.spacingSM),
+        Row(
+          children: <Widget>[
+            Expanded(
+              child: OutlinedButton.icon(
+                onPressed: () => _pickImage(context),
+                icon: const Icon(Icons.photo_library),
+                label: const Text('Gallery'),
+              ),
+            ),
+            const SizedBox(width: AppDimensions.spacingSM),
+            Expanded(
+              child: OutlinedButton.icon(
+                onPressed: () => _takePhoto(context),
+                icon: const Icon(Icons.camera_alt),
+                label: const Text('Camera'),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
   }
 }

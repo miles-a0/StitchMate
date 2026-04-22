@@ -32,13 +32,15 @@ class YarnAdapter extends TypeAdapter<Yarn> {
       status: fields[12] as String? ?? YarnStatus.available,
       linkedProjectIds:
           (fields[13] as List<dynamic>?)?.cast<String>() ?? const <String>[],
+      photoUris:
+          (fields[14] as List<dynamic>?)?.cast<String>() ?? const <String>[],
     );
   }
 
   @override
   void write(BinaryWriter writer, Yarn obj) {
     writer
-      ..writeByte(14)
+      ..writeByte(15)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -66,7 +68,9 @@ class YarnAdapter extends TypeAdapter<Yarn> {
       ..writeByte(12)
       ..write(obj.status)
       ..writeByte(13)
-      ..write(obj.linkedProjectIds);
+      ..write(obj.linkedProjectIds)
+      ..writeByte(14)
+      ..write(obj.photoUris);
   }
 
   @override

@@ -1,8 +1,6 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:path_provider/path_provider.dart';
 
 import '../models/counter_adapter.dart';
 import '../models/project_adapter.dart';
@@ -36,12 +34,7 @@ class HiveInit {
   ///
   /// Call this in [main.dart] before [runApp()].
   static Future<void> initialise() async {
-    if (Platform.isAndroid || Platform.isIOS || Platform.isMacOS) {
-      final appDocumentDir = await getApplicationDocumentsDirectory();
-      await Hive.initFlutter(appDocumentDir.path);
-    } else {
-      await Hive.initFlutter();
-    }
+    await Hive.initFlutter();
 
     // Register Hive adapters.
     Hive.registerAdapter(CounterAdapter());

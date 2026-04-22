@@ -22,6 +22,7 @@ import '../features/calculator/screens/yarn_weight_guide_screen.dart';
 import '../features/settings/screens/settings_screen.dart';
 import '../features/settings/screens/data_export_import_screen.dart';
 import '../features/settings/screens/privacy_policy_screen.dart';
+import '../features/calculator/screens/pdf_pattern_viewer_screen.dart';
 
 /// go_router configuration for StitchMate.
 ///
@@ -177,6 +178,10 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                   GoRoute(
                     path: 'weights',
                     builder: (context, state) => const YarnWeightGuideScreen(),
+                  ),
+                  GoRoute(
+                    path: 'pdf',
+                    builder: (context, state) => const PdfPatternViewerScreen(),
                   ),
                   GoRoute(
                     path: 'settings',

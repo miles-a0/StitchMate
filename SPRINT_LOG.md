@@ -394,3 +394,39 @@
 - Import functionality uses a placeholder message because `file_picker` is not in pubspec and adding new packages at this stage risks compatibility issues
 - Export uses `getTemporaryDirectory()` + `Share.shareXFiles()` which works on both iOS and Android
 - All 244 tests pass across 12 test files covering every feature
+
+---
+
+## Sprint 9 — Advanced Features (Post-MVP)
+
+### 2026-04-22
+**Completed:**
+- **Yarn Photo Upload:**
+  - Added `photoUris` field to `Yarn` model (List<String> for local file paths)
+  - Updated `YarnAdapter` (typeId: 3) to persist photoUris to Hive
+  - Updated `YarnNotifier.createYarn()` to accept photoUris parameter
+  - Built `_PhotoPicker` widget in `NewYarnScreen`:
+    - Gallery button (uses `image_picker`)
+    - Camera button (uses `image_picker`)
+    - Horizontal scrolling photo preview with delete (X) button
+  - Updated `YarnDetailScreen` with `_PhotosGallery` widget:
+    - Shows horizontal scrolling photo gallery when photos exist
+    - Displays full-size images from local file paths
+- **PDF Pattern Viewer (Placeholder):**
+  - Added `PdfPatternViewerScreen` with "Coming Soon" message
+  - Added route `/tools/pdf` to go_router
+  - Added "Pattern Viewer" card to `ToolsScreen`
+  - Note: Full PDF rendering with row highlight requires a PDF package compatible with Flutter 3.16.9. The UI framework (row tracker, jump-to-row, highlight bar settings) is ready and will be wired up once a compatible PDF engine is found.
+- All tests pass (244 total), `flutter analyze` zero issues, code formatted
+
+**In Progress:**
+- None
+
+**Next Session:**
+- Find a Flutter 3.16.9-compatible PDF package (e.g., `native_pdf_view` or `pdfx`) to enable full PDF pattern import + row highlight
+
+**Issues / Decisions Made:**
+- `syncfusion_flutter_pdfviewer` v24.2.8 is incompatible with Flutter 3.16.9 (uses `HardwareKeyboard.isMetaPressed` which doesn't exist in this Flutter version)
+- Removed `syncfusion_flutter_pdfviewer` and built a placeholder screen instead
+- `image_picker` v1.0.8 works correctly with Flutter 3.16.9 for both gallery and camera
+- Yarn photos are stored as local file paths (not in Hive) — the paths are persisted in the Yarn model, but the actual image files remain in the app's temporary/cache directory

@@ -118,6 +118,7 @@ class YarnNotifier extends StateNotifier<YarnState> {
     required String hexColour,
     String notes = '',
     String? purchaseLocation,
+    List<String> photoUris = const <String>[],
   }) {
     final yarn = Yarn(
       id: _uuid.v4(),
@@ -132,6 +133,7 @@ class YarnNotifier extends StateNotifier<YarnState> {
       hexColour: hexColour,
       notes: notes,
       purchaseLocation: purchaseLocation,
+      photoUris: photoUris,
     );
 
     final updated = List<Yarn>.from(state.yarns)..add(yarn);

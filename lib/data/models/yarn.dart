@@ -20,6 +20,7 @@ class Yarn {
     this.purchaseLocation,
     this.status = YarnStatus.available,
     this.linkedProjectIds = const <String>[],
+    this.photoUris = const <String>[],
   });
 
   final String id;
@@ -37,6 +38,7 @@ class Yarn {
   final String? purchaseLocation;
   final String status; // YarnStatus values
   final List<String> linkedProjectIds;
+  final List<String> photoUris; // Local file paths to yarn photos
 
   /// Total yardage across all skeins.
   int get totalYardage => yardagePerSkein * skeinCount;
@@ -62,6 +64,7 @@ class Yarn {
     String? purchaseLocation,
     String? status,
     List<String>? linkedProjectIds,
+    List<String>? photoUris,
   }) {
     return Yarn(
       id: id ?? this.id,
@@ -80,6 +83,7 @@ class Yarn {
           : (purchaseLocation ?? this.purchaseLocation),
       status: status ?? this.status,
       linkedProjectIds: linkedProjectIds ?? this.linkedProjectIds,
+      photoUris: photoUris ?? this.photoUris,
     );
   }
 
