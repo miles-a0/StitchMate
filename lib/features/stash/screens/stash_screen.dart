@@ -241,7 +241,8 @@ class _YarnListTile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text('${YarnWeight.label(yarn.weight)} · ${yarn.fibre}'),
-          Text('${yarn.skeinCount} skein${yarn.skeinCount == 1 ? '' : 's'} · ${yarn.totalYardage} yds'),
+          Text(
+              '${yarn.skeinCount} skein${yarn.skeinCount == 1 ? '' : 's'} · ${yarn.totalYardage} yds'),
         ],
       ),
       trailing: _StatusChip(status: yarn.status),

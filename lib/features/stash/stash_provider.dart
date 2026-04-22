@@ -69,8 +69,7 @@ class YarnState {
 
 /// Notifier that manages yarn stash with Hive persistence.
 class YarnNotifier extends StateNotifier<YarnState> {
-  YarnNotifier({required bool isPro})
-      : super(const YarnState()) {
+  YarnNotifier({required bool isPro}) : super(const YarnState()) {
     _loadFromHive();
   }
 

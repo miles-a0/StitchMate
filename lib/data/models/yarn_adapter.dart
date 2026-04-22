@@ -30,7 +30,8 @@ class YarnAdapter extends TypeAdapter<Yarn> {
       notes: fields[10] as String? ?? '',
       purchaseLocation: fields[11] as String?,
       status: fields[12] as String? ?? YarnStatus.available,
-      linkedProjectIds: (fields[13] as List<dynamic>?)?.cast<String>() ?? const <String>[],
+      linkedProjectIds:
+          (fields[13] as List<dynamic>?)?.cast<String>() ?? const <String>[],
     );
   }
 

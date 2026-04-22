@@ -7,6 +7,7 @@ import '../../../core/strings.dart';
 import '../../../core/theme.dart';
 import '../../../data/models/project.dart';
 import '../projects_provider.dart';
+import '../../timer/timer_provider.dart';
 
 /// Screen showing all projects in a grid/list.
 ///
@@ -161,7 +162,7 @@ class _ProjectCard extends ConsumerWidget {
                 ),
               ),
 
-              // Counter value (if has counters).
+              // Counter value and timer (if has counters).
               if (project.counters.isNotEmpty)
                 Container(
                   padding: const EdgeInsets.symmetric(
@@ -172,12 +173,18 @@ class _ProjectCard extends ConsumerWidget {
                     color: colorScheme.primaryContainer,
                     borderRadius: BorderRadius.circular(AppDimensions.radiusMD),
                   ),
-                  child: Text(
-                    '${project.counters.first.currentValue}',
-                    style: theme.textTheme.titleLarge?.copyWith(
-                      color: colorScheme.onPrimaryContainer,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Text(
+                        '${project.counters.first.currentValue}',
+                        style: theme.textTheme.titleLarge?.copyWith(
+                          color: colorScheme.onPrimaryContainer,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      _ProjectTimerDisplay(projectId: project.id),
+                    ],
                   ),
                 ),
 
@@ -307,6 +314,45 @@ class _StatusChip extends StatelessWidget {
       style: theme.textTheme.bodySmall?.copyWith(
         color: colorScheme.onSurfaceVariant,
       ),
+    );
+  }
+}
+
+/// Small timer display showing cumulative time for a project.
+class _ProjectTimerDisplay extends ConsumerWidget {
+  const _ProjectTimerDisplay({required this.projectId});
+
+  final String projectId;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final timerState = ref.watch(timerProvider);
+    final totalSeconds = timerState.totalElapsedForProject(projectId);
+
+    if (totalSeconds == 0) {
+      return const SizedBox.shrink();
+    }
+
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        Icon(
+          Icons.timer,
+          size: 12,
+          color: colorScheme.onPrimaryContainer.withOpacity(0.7),
+        ),
+        const SizedBox(width: 4),
+        Text(
+          TimerState.formatDuration(totalSeconds),
+          style: theme.textTheme.bodySmall?.copyWith(
+            color: colorScheme.onPrimaryContainer.withOpacity(0.7),
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ],
     );
   }
 }

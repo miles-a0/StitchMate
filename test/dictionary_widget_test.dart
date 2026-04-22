@@ -83,7 +83,11 @@ final List<StitchEntry> _testEntries = <StitchEntry>[
     category: 'basic',
     difficulty: 'beginner',
     description: 'The shortest standard crochet stitch.',
-    steps: <String>['Insert hook.', 'Yarn over and pull up loop.', 'Pull through both loops.'],
+    steps: <String>[
+      'Insert hook.',
+      'Yarn over and pull up loop.',
+      'Pull through both loops.'
+    ],
     alsoKnownAs: <String>[],
     usRegion: true,
     ukRegion: false,

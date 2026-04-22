@@ -154,8 +154,7 @@ void main() {
       expect(find.text('Malabrigo — Sunset Glow'), findsNothing);
     });
 
-    testWidgets('StashScreen shows empty state when no yarns',
-        (tester) async {
+    testWidgets('StashScreen shows empty state when no yarns', (tester) async {
       await tester.pumpWidget(createStashScope(yarns: const <Yarn>[]));
       await tester.pumpAndSettle();
 
@@ -169,8 +168,7 @@ void main() {
       expect(find.byType(FloatingActionButton), findsOneWidget);
     });
 
-    testWidgets('StashScreen tapping yarn navigates to detail',
-        (tester) async {
+    testWidgets('StashScreen tapping yarn navigates to detail', (tester) async {
       await tester.pumpWidget(createStashScope());
       await tester.pumpAndSettle();
 

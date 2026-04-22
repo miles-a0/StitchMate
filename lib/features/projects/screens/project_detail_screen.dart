@@ -7,6 +7,7 @@ import '../../../core/strings.dart';
 import '../../../data/models/project.dart';
 import '../projects_provider.dart';
 import 'project_counter_tab.dart';
+import 'project_timer_tab.dart';
 
 /// Project detail screen with tabs for Counter, Timer, Notes, Photos.
 ///
@@ -97,7 +98,7 @@ class _ProjectDetailScreenState extends ConsumerState<ProjectDetailScreen> {
               index: _selectedTab,
               children: <Widget>[
                 ProjectCounterTab(project: project),
-                const _PlaceholderTab(label: AppStrings.timerTitle),
+                ProjectTimerTab(project: project),
                 _NotesTab(project: project),
                 const _PlaceholderTab(label: AppStrings.projectPhotos),
               ],

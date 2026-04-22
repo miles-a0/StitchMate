@@ -7,6 +7,7 @@ import 'package:path_provider/path_provider.dart';
 import '../models/counter_adapter.dart';
 import '../models/project_adapter.dart';
 import '../models/yarn_adapter.dart';
+import '../models/timer_session_adapter.dart';
 
 /// Hive initialisation and box management.
 ///
@@ -46,6 +47,7 @@ class HiveInit {
     Hive.registerAdapter(CounterAdapter());
     Hive.registerAdapter(ProjectAdapter());
     Hive.registerAdapter(YarnAdapter());
+    Hive.registerAdapter(TimerSessionAdapter());
 
     // Open critical boxes immediately (required for app launch).
     _settingsBox = await Hive.openBox<dynamic>(_settingsBoxName);

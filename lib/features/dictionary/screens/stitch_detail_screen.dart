@@ -397,9 +397,7 @@ class _MetaChip extends StatelessWidget {
         : colorScheme.onSecondaryContainer;
 
     return Chip(
-      avatar: icon != null
-          ? Icon(icon, size: 16, color: fg)
-          : null,
+      avatar: icon != null ? Icon(icon, size: 16, color: fg) : null,
       label: Text(label),
       backgroundColor: bg,
       labelStyle: TextStyle(color: fg, fontSize: 12),

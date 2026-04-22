@@ -53,7 +53,8 @@ class _EditYarnScreenState extends ConsumerState<EditYarnScreen> {
   }
 
   void _loadYarn() {
-    final yarn = ref.read(yarnStashProvider.notifier).getYarnById(widget.yarnId);
+    final yarn =
+        ref.read(yarnStashProvider.notifier).getYarnById(widget.yarnId);
     if (yarn != null) {
       _brandController.text = yarn.brand;
       _colourNameController.text = yarn.colourName;
@@ -297,7 +298,8 @@ class _EditYarnScreenState extends ConsumerState<EditYarnScreen> {
   void _saveYarn() {
     if (!_formKey.currentState!.validate()) return;
 
-    final yarn = ref.read(yarnStashProvider.notifier).getYarnById(widget.yarnId);
+    final yarn =
+        ref.read(yarnStashProvider.notifier).getYarnById(widget.yarnId);
     if (yarn == null) return;
 
     final updated = yarn.copyWith(
@@ -332,12 +334,29 @@ class _ColourPicker extends StatelessWidget {
   final ValueChanged<String> onColourChanged;
 
   static const List<String> _presetColours = <String>[
-    '#7B3F6E', '#C2185B', '#E91E63', '#F48FB1',
-    '#9C27B0', '#673AB7', '#3F51B5', '#2196F3',
-    '#03A9F4', '#00BCD4', '#009688', '#4CAF50',
-    '#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107',
-    '#FF9800', '#FF5722', '#795548', '#9E9E9E',
-    '#607D8B', '#000000', '#FFFFFF',
+    '#7B3F6E',
+    '#C2185B',
+    '#E91E63',
+    '#F48FB1',
+    '#9C27B0',
+    '#673AB7',
+    '#3F51B5',
+    '#2196F3',
+    '#03A9F4',
+    '#00BCD4',
+    '#009688',
+    '#4CAF50',
+    '#8BC34A',
+    '#CDDC39',
+    '#FFEB3B',
+    '#FFC107',
+    '#FF9800',
+    '#FF5722',
+    '#795548',
+    '#9E9E9E',
+    '#607D8B',
+    '#000000',
+    '#FFFFFF',
   ];
 
   @override

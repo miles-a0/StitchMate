@@ -202,13 +202,13 @@ class ProjectCounterTab extends ConsumerWidget {
             onPressed: () => Navigator.of(context).pop(false),
             child: const Text(AppStrings.cancel),
           ),
-              FilledButton(
-                onPressed: () => Navigator.of(context).pop(true),
-                style: FilledButton.styleFrom(
-                  backgroundColor: Theme.of(context).colorScheme.error,
-                ),
-                child: const Text(AppStrings.counterReset),
-              ),
+          FilledButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            style: FilledButton.styleFrom(
+              backgroundColor: Theme.of(context).colorScheme.error,
+            ),
+            child: const Text(AppStrings.counterReset),
+          ),
         ],
       ),
     );

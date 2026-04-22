@@ -21,7 +21,8 @@ class StitchEntry {
   final String abbreviation;
   final String fullName;
   final String craft; // 'knitting' | 'crochet'
-  final String category; // 'basic' | 'increase' | 'decrease' | 'cable' | 'lace' | 'special'
+  final String
+      category; // 'basic' | 'increase' | 'decrease' | 'cable' | 'lace' | 'special'
   final String difficulty; // 'beginner' | 'intermediate' | 'advanced'
   final String description;
   final List<String> steps;

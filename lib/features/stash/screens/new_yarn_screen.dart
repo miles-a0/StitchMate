@@ -256,20 +256,20 @@ class _NewYarnScreenState extends ConsumerState<NewYarnScreen> {
     if (!_formKey.currentState!.validate()) return;
 
     ref.read(yarnStashProvider.notifier).createYarn(
-      brand: _brandController.text.trim(),
-      colourName: _colourNameController.text.trim(),
-      weight: _selectedWeight,
-      fibre: _fibreController.text.trim(),
-      yardagePerSkein: int.parse(_yardageController.text.trim()),
-      metreagePerSkein: int.parse(_metreageController.text.trim()),
-      gramsPerSkein: int.parse(_gramsController.text.trim()),
-      skeinCount: int.parse(_skeinCountController.text.trim()),
-      hexColour: _hexColour,
-      notes: _notesController.text.trim(),
-      purchaseLocation: _purchaseLocationController.text.trim().isEmpty
-          ? null
-          : _purchaseLocationController.text.trim(),
-    );
+          brand: _brandController.text.trim(),
+          colourName: _colourNameController.text.trim(),
+          weight: _selectedWeight,
+          fibre: _fibreController.text.trim(),
+          yardagePerSkein: int.parse(_yardageController.text.trim()),
+          metreagePerSkein: int.parse(_metreageController.text.trim()),
+          gramsPerSkein: int.parse(_gramsController.text.trim()),
+          skeinCount: int.parse(_skeinCountController.text.trim()),
+          hexColour: _hexColour,
+          notes: _notesController.text.trim(),
+          purchaseLocation: _purchaseLocationController.text.trim().isEmpty
+              ? null
+              : _purchaseLocationController.text.trim(),
+        );
 
     context.pop();
   }
@@ -286,12 +286,29 @@ class _ColourPicker extends StatelessWidget {
   final ValueChanged<String> onColourChanged;
 
   static const List<String> _presetColours = <String>[
-    '#7B3F6E', '#C2185B', '#E91E63', '#F48FB1',
-    '#9C27B0', '#673AB7', '#3F51B5', '#2196F3',
-    '#03A9F4', '#00BCD4', '#009688', '#4CAF50',
-    '#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107',
-    '#FF9800', '#FF5722', '#795548', '#9E9E9E',
-    '#607D8B', '#000000', '#FFFFFF',
+    '#7B3F6E',
+    '#C2185B',
+    '#E91E63',
+    '#F48FB1',
+    '#9C27B0',
+    '#673AB7',
+    '#3F51B5',
+    '#2196F3',
+    '#03A9F4',
+    '#00BCD4',
+    '#009688',
+    '#4CAF50',
+    '#8BC34A',
+    '#CDDC39',
+    '#FFEB3B',
+    '#FFC107',
+    '#FF9800',
+    '#FF5722',
+    '#795548',
+    '#9E9E9E',
+    '#607D8B',
+    '#000000',
+    '#FFFFFF',
   ];
 
   @override

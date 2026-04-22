@@ -25,7 +25,8 @@ class Yarn {
   final String id;
   final String brand;
   final String colourName;
-  final String weight; // lace, fingering, sport, dk, worsted, aran, bulky, superBulky
+  final String
+      weight; // lace, fingering, sport, dk, worsted, aran, bulky, superBulky
   final String fibre;
   final int yardagePerSkein;
   final int metreagePerSkein;

@@ -215,3 +215,52 @@
 - Status colours (green/orange/red) are hardcoded for semantic clarity
 - `ensureVisible()` required in widget tests for horizontally scrolling filter chips before tapping
 - Yarn linking to projects updates status automatically (Available -> In Use, In Use -> Available when unlinked)
+
+---
+
+## Sprint 5 — Project Timer
+
+### 2026-04-22
+**Completed:**
+- Created `TimerSession` Hive model (`lib/data/models/timer_session.dart`) with `typeId: 4`:
+  - Fields: id, projectId, startTime, endTime, durationSeconds
+  - Computed: `isCompleted`, `formattedDuration`, `formattedDate`
+  - `copyWith()` with sentinel pattern for clearing nullable fields
+- Created `TimerSessionAdapter` (`lib/data/models/timer_session_adapter.dart`) — manual TypeAdapter, registered in `HiveInit`
+- Created `TimerState` + `TimerNotifier` (`lib/features/timer/timer_provider.dart`):
+  - TimerStatus enum: idle, running, paused
+  - `startTimer()` — creates new session, starts periodic tick
+  - `pauseTimer()` / `resumeTimer()` — pauses/resume without ending session
+  - `stopTimer()` — completes session, adds to history, persists to Hive
+  - `resetTimer()` — discards active session without saving
+  - `deleteSession()` — removes from history and Hive
+  - `elapsedSeconds` increments every second via `Timer.periodic` in notifier (not widget)
+  - `totalElapsedForProject()` sums completed sessions + current elapsed
+  - Hive persistence on every mutation
+- Built `ProjectTimerTab` (`lib/features/projects/screens/project_timer_tab.dart`):
+  - Large HH:MM:SS display with project-themed container
+  - Start/Pause and Stop buttons in a row (minimum 56dp height)
+  - Button states adapt to timer status (Start → Pause when running)
+  - Session history list with date, duration, delete action
+  - Empty state with "No sessions recorded yet" message
+  - Delete session with two-step confirmation dialog
+- Integrated `ProjectTimerTab` into `ProjectDetailScreen` (replaced placeholder)
+- Updated `ProjectsScreen` cards to show cumulative timer display alongside counter value
+  - `_ProjectTimerDisplay` widget shows icon + formatted time when > 0 seconds
+- **Unit tests**: 19 tests for TimerSession model, TimerState, TimerNotifier
+- **Widget tests**: 7 tests for ProjectTimerTab (display, start/pause, stop, sessions, active state)
+- All tests pass (185 total), `flutter analyze` zero issues, code formatted
+
+**In Progress:**
+- None
+
+**Next Session:**
+- Begin Sprint 6: Tools (Gauge calculator, WPI calculator, needle chart, yarn weight guide)
+
+**Issues / Decisions Made:**
+- `TimerState.copyWith()` uses boolean `clearActiveSession` / `clearError` flags instead of sentinel string comparison to avoid type mismatch with nullable object fields
+- Timer tick runs in `TimerNotifier` via `Timer.periodic` — this keeps UI responsive and avoids rebuild storms
+- `dispose()` cancels the tick timer to prevent memory leaks
+- Background notification / foreground service deferred to Sprint 7 (Settings & Polish) when `flutter_foreground_task` integration will be fully implemented
+- Timer is Pro-gated per PDR Section 9.1 — the UI is visible to all users but start functionality will be gated in Sprint 7 when Pro dialog is built
+- Widget tests for timer use `pump()` not `pumpAndSettle()` when navigating to Timer tab to avoid timeout from `IndexedStack` animation

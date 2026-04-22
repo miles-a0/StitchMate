@@ -408,8 +408,8 @@ class _EnoughYarnCalculator extends StatelessWidget {
             Text(
               AppStrings.enoughYarnTitle,
               style: theme.textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+                fontWeight: FontWeight.bold,
+              ),
             ),
             const SizedBox(height: AppDimensions.spacingSM),
             Row(

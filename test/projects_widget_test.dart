@@ -170,8 +170,7 @@ void main() {
   });
 
   group('ProjectDetailScreen Widget Tests', () {
-    testWidgets('ProjectDetailScreen displays project name',
-        (tester) async {
+    testWidgets('ProjectDetailScreen displays project name', (tester) async {
       final notifier = ProjectsNotifier();
       notifier.createProject(name: 'Test Scarf', craftType: CraftType.knit);
       final projectId = notifier.state.projects.first.id;
@@ -273,8 +272,7 @@ void main() {
       expect(find.text('0'), findsOneWidget);
     });
 
-    testWidgets('ProjectDetailScreen reset shows confirmation',
-        (tester) async {
+    testWidgets('ProjectDetailScreen reset shows confirmation', (tester) async {
       final notifier = ProjectsNotifier();
       notifier.createProject(name: 'Test Scarf');
       final projectId = notifier.state.projects.first.id;

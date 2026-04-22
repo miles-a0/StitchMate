@@ -59,7 +59,8 @@ class StitchDictionaryState {
   static const String _clearSentinel = '\x00CLEAR\x00';
 
   StitchDictionaryState clearError() => copyWith(error: _clearSentinel);
-  StitchDictionaryState clearCategory() => copyWith(selectedCategory: _clearSentinel);
+  StitchDictionaryState clearCategory() =>
+      copyWith(selectedCategory: _clearSentinel);
 
   /// Get favourite-able entries (all of them).
   List<StitchEntry> get entries => filteredEntries;
@@ -159,7 +160,8 @@ class StitchDictionaryNotifier extends StateNotifier<StitchDictionaryState> {
   }) {
     return state.allEntries.where((entry) {
       // Craft filter.
-      if (craft == CraftFilter.knitting && entry.craft != StitchCraft.knitting) {
+      if (craft == CraftFilter.knitting &&
+          entry.craft != StitchCraft.knitting) {
         return false;
       }
       if (craft == CraftFilter.crochet && entry.craft != StitchCraft.crochet) {
