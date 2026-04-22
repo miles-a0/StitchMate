@@ -264,3 +264,47 @@
 - Background notification / foreground service deferred to Sprint 7 (Settings & Polish) when `flutter_foreground_task` integration will be fully implemented
 - Timer is Pro-gated per PDR Section 9.1 — the UI is visible to all users but start functionality will be gated in Sprint 7 when Pro dialog is built
 - Widget tests for timer use `pump()` not `pumpAndSettle()` when navigating to Timer tab to avoid timeout from `IndexedStack` animation
+
+---
+
+## Sprint 6 — Tools
+
+### 2026-04-22
+**Completed:**
+- Created static reference data:
+  - `NeedleSizeData` — 21 knitting needle entries (US / metric mm / UK) + 17 crochet hook entries (US letter / metric mm)
+  - `YarnWeightData` — 8 yarn weight entries with WPI ranges, descriptions, needle/hook recommendations, gauge ranges
+- Built `ToolsScreen` — landing page with 4 tool cards in responsive grid (1 column phone, 2 columns tablet)
+- Built `GaugeCalculatorScreen`:
+  - Unit toggle: Metric (cm) / Imperial (inches) via `SegmentedButton`
+  - Forward calc: stitches/rows per swatch + target dimensions → total stitches/rows needed
+  - Reverse calc: total stitches/rows + gauge → finished dimensions
+  - Real-time result display in themed result cards
+- Built `WpiCalculatorScreen`:
+  - WPI input with explanation card
+  - Identifies yarn weight from WPI value
+  - Shows full result card with needle, hook, gauge info
+  - Reference table of all WPI ranges
+- Built `NeedleChartScreen`:
+  - TabBar with Knitting Needles / Crochet Hooks tabs
+  - Conversion tables with styled header row
+- Built `YarnWeightGuideScreen`:
+  - Scrollable list of 8 detailed cards
+  - Each card: colour-coded dot, description, info grid (WPI, needles, hook, gauge)
+- Updated go_router: replaced `CalculatorScreen` placeholder with `ToolsScreen`, added routes for all 4 tools
+- **Unit tests**: 21 tests for needle data, yarn weight data, WPI identification, gauge calculator logic
+- **Widget tests**: 12 tests for all 4 tool screens
+- All tests pass (218 total), `flutter analyze` zero issues, code formatted
+
+**In Progress:**
+- None
+
+**Next Session:**
+- Begin Sprint 7: Settings & Polish (settings screen, dark mode, accent colour, onboarding, app icon, splash)
+
+**Issues / Decisions Made:**
+- `YarnWeight` in the yarn model is a String constant class, not an enum — the tools data uses matching String values
+- WPI ranges intentionally overlap slightly (e.g., Sport 12-14 and DK 11-13) — `identifyByWpi` returns first match, which is acceptable for approximate identification
+- `Icons.knitting` does not exist in Flutter 3.16.9 — used `Icons.auto_fix_high` as needle substitute
+- Gauge calculator uses `ConsumerStatefulWidget` to manage local form state — no Hive persistence needed for calculator inputs
+- All static reference data is stored as Dart const lists for zero runtime overhead and instant access

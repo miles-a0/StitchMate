@@ -14,7 +14,11 @@ import '../features/stash/screens/stash_screen.dart';
 import '../features/stash/screens/new_yarn_screen.dart';
 import '../features/stash/screens/yarn_detail_screen.dart';
 import '../features/stash/screens/edit_yarn_screen.dart';
-import '../features/calculator/screens/calculator_screen.dart';
+import '../features/calculator/screens/tools_screen.dart';
+import '../features/calculator/screens/gauge_calculator_screen.dart';
+import '../features/calculator/screens/wpi_calculator_screen.dart';
+import '../features/calculator/screens/needle_chart_screen.dart';
+import '../features/calculator/screens/yarn_weight_guide_screen.dart';
 
 /// go_router configuration for StitchMate.
 ///
@@ -153,7 +157,25 @@ final appRouterProvider = Provider<GoRouter>((ref) {
             routes: <GoRoute>[
               GoRoute(
                 path: '/tools',
-                builder: (context, state) => const CalculatorScreen(),
+                builder: (context, state) => const ToolsScreen(),
+                routes: <RouteBase>[
+                  GoRoute(
+                    path: 'gauge',
+                    builder: (context, state) => const GaugeCalculatorScreen(),
+                  ),
+                  GoRoute(
+                    path: 'wpi',
+                    builder: (context, state) => const WpiCalculatorScreen(),
+                  ),
+                  GoRoute(
+                    path: 'needles',
+                    builder: (context, state) => const NeedleChartScreen(),
+                  ),
+                  GoRoute(
+                    path: 'weights',
+                    builder: (context, state) => const YarnWeightGuideScreen(),
+                  ),
+                ],
               ),
             ],
           ),
