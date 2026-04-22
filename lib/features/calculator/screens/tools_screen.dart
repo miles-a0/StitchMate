@@ -40,6 +40,12 @@ class ToolsScreen extends StatelessWidget {
         route: '/tools/weights',
         colourIndex: 3,
       ),
+      const _ToolItem(
+        icon: Icons.settings_outlined,
+        label: AppStrings.settingsTitle,
+        route: '/tools/settings',
+        colourIndex: 4,
+      ),
     ];
 
     return Scaffold(
@@ -105,6 +111,7 @@ class _ToolCard extends StatelessWidget {
       colorScheme.secondary,
       colorScheme.tertiary,
       colorScheme.primary.withOpacity(0.8),
+      colorScheme.outline,
     ];
 
     final bgColours = <Color>[
@@ -112,6 +119,7 @@ class _ToolCard extends StatelessWidget {
       colorScheme.secondaryContainer,
       colorScheme.tertiaryContainer,
       colorScheme.primaryContainer.withOpacity(0.6),
+      colorScheme.surfaceVariant,
     ];
 
     final colour = colours[item.colourIndex % colours.length];

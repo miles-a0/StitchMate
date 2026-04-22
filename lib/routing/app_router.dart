@@ -19,6 +19,7 @@ import '../features/calculator/screens/gauge_calculator_screen.dart';
 import '../features/calculator/screens/wpi_calculator_screen.dart';
 import '../features/calculator/screens/needle_chart_screen.dart';
 import '../features/calculator/screens/yarn_weight_guide_screen.dart';
+import '../features/settings/screens/settings_screen.dart';
 
 /// go_router configuration for StitchMate.
 ///
@@ -174,6 +175,10 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                   GoRoute(
                     path: 'weights',
                     builder: (context, state) => const YarnWeightGuideScreen(),
+                  ),
+                  GoRoute(
+                    path: 'settings',
+                    builder: (context, state) => const SettingsScreen(),
                   ),
                 ],
               ),

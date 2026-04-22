@@ -6,6 +6,7 @@ import 'package:audioplayers/audioplayers.dart';
 import '../../../core/dimensions.dart';
 import '../../../core/strings.dart';
 import '../../../core/providers.dart';
+import '../../../features/settings/settings_provider.dart';
 import '../counter_provider.dart';
 import '../widgets/counter_increment_button.dart';
 import '../widgets/set_value_dialog.dart';
@@ -145,7 +146,7 @@ class CounterScreen extends ConsumerWidget {
       HapticFeedback.mediumImpact();
     }
 
-    if (soundEnabled) {
+    if (soundEnabled != CounterSound.off) {
       // Lightweight click sound using system assets.
       final player = AudioPlayer();
       player.play(AssetSource('sounds/click.mp3'));

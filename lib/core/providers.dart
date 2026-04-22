@@ -1,5 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../features/settings/settings_provider.dart';
+
 /// Base Riverpod providers for StitchMate.
 ///
 /// All feature-specific providers live in their respective feature folders.
@@ -19,17 +21,17 @@ final appLoadingProvider = StateProvider<bool>((ref) => false);
 final appErrorProvider = StateProvider<String?>((ref) => null);
 
 /// Theme mode provider (light / dark / system).
-/// Persisted via SharedPreferences in a real implementation.
+/// Delegates to settingsProvider for persistence.
 final themeModeProvider = StateProvider<ThemeModeOption>((ref) {
-  return ThemeModeOption.system;
+  return ref.watch(settingsProvider.select((s) => s.themeMode));
 });
 
 enum ThemeModeOption { light, dark, system }
 
 /// Unit system provider (metric / imperial).
-/// Persisted via SharedPreferences in a real implementation.
+/// Delegates to settingsProvider for persistence.
 final unitSystemProvider = StateProvider<UnitSystem>((ref) {
-  return UnitSystem.metric;
+  return ref.watch(settingsProvider.select((s) => s.unitSystem));
 });
 
 enum UnitSystem { metric, imperial }
@@ -45,10 +47,19 @@ final proStatusProvider = StateProvider<bool>((ref) {
 });
 
 /// Counter haptics enabled provider.
-final counterHapticsProvider = StateProvider<bool>((ref) => true);
+/// Delegates to settingsProvider for persistence.
+final counterHapticsProvider = StateProvider<bool>((ref) {
+  return ref.watch(settingsProvider.select((s) => s.counterHaptics));
+});
 
-/// Counter sound enabled provider.
-final counterSoundProvider = StateProvider<bool>((ref) => false);
+/// Counter sound provider.
+/// Delegates to settingsProvider for persistence.
+final counterSoundProvider = StateProvider<CounterSound>((ref) {
+  return ref.watch(settingsProvider.select((s) => s.counterSound));
+});
 
 /// Keep screen awake while counter active provider.
-final keepScreenAwakeProvider = StateProvider<bool>((ref) => true);
+/// Delegates to settingsProvider for persistence.
+final keepScreenAwakeProvider = StateProvider<bool>((ref) {
+  return ref.watch(settingsProvider.select((s) => s.keepScreenAwake));
+});

@@ -3,21 +3,33 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:stitch_mate/main.dart';
+import 'package:stitch_mate/features/settings/settings_provider.dart';
+
+/// Build the app with onboarding skipped.
+Widget _buildApp() {
+  return ProviderScope(
+    overrides: [
+      settingsProvider.overrideWith(
+        (ref) => SettingsNotifier()
+          ..state = const SettingsState(
+            hasCompletedOnboarding: true,
+          ),
+      ),
+    ],
+    child: const StitchMateApp(),
+  );
+}
 
 void main() {
   group('Widget Tests', () {
     testWidgets('StitchMateApp builds without error', (tester) async {
-      await tester.pumpWidget(
-        const ProviderScope(child: StitchMateApp()),
-      );
+      await tester.pumpWidget(_buildApp());
 
       expect(find.byType(MaterialApp), findsOneWidget);
     });
 
     testWidgets('ScaffoldWithNavBar renders on narrow screens', (tester) async {
-      await tester.pumpWidget(
-        const ProviderScope(child: StitchMateApp()),
-      );
+      await tester.pumpWidget(_buildApp());
       await tester.pumpAndSettle();
 
       // Verify the scaffold with nav bar is present by looking for nav labels.
@@ -34,9 +46,7 @@ void main() {
       addTearDown(tester.view.resetPhysicalSize);
       addTearDown(tester.view.resetDevicePixelRatio);
 
-      await tester.pumpWidget(
-        const ProviderScope(child: StitchMateApp()),
-      );
+      await tester.pumpWidget(_buildApp());
       await tester.pumpAndSettle();
 
       expect(find.byType(NavigationRail), findsOneWidget);
@@ -49,9 +59,7 @@ void main() {
       addTearDown(tester.view.resetPhysicalSize);
       addTearDown(tester.view.resetDevicePixelRatio);
 
-      await tester.pumpWidget(
-        const ProviderScope(child: StitchMateApp()),
-      );
+      await tester.pumpWidget(_buildApp());
       await tester.pumpAndSettle();
 
       // On narrow screens we should see the nav labels in a BottomNavigationBar.
@@ -60,9 +68,7 @@ void main() {
     });
 
     testWidgets('Tapping nav items switches tabs', (tester) async {
-      await tester.pumpWidget(
-        const ProviderScope(child: StitchMateApp()),
-      );
+      await tester.pumpWidget(_buildApp());
       // Initial pump to build, then pump for async dictionary load.
       await tester.pump();
       await tester.pump(const Duration(seconds: 1));

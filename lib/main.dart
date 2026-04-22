@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/theme.dart';
 import 'core/providers.dart';
 import 'data/local/hive_init.dart';
+import 'features/settings/settings_provider.dart';
+import 'features/settings/screens/onboarding_screen.dart';
 import 'routing/app_router.dart';
 
 void main() async {
@@ -22,6 +24,19 @@ class StitchMateApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(appRouterProvider);
     final themeMode = ref.watch(themeModeProvider);
+    final settings = ref.watch(settingsProvider);
+
+    // Show onboarding on first launch.
+    if (!settings.hasCompletedOnboarding) {
+      return MaterialApp(
+        title: 'StitchMate',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.lightTheme,
+        darkTheme: AppTheme.darkTheme,
+        themeMode: _mapThemeMode(themeMode),
+        home: const OnboardingScreen(),
+      );
+    }
 
     return MaterialApp.router(
       title: 'StitchMate',

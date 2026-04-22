@@ -308,3 +308,49 @@
 - `Icons.knitting` does not exist in Flutter 3.16.9 — used `Icons.auto_fix_high` as needle substitute
 - Gauge calculator uses `ConsumerStatefulWidget` to manage local form state — no Hive persistence needed for calculator inputs
 - All static reference data is stored as Dart const lists for zero runtime overhead and instant access
+
+---
+
+## Sprint 7 — Settings & Polish
+
+### 2026-04-22
+**Completed:**
+- Created `SettingsState` + `SettingsNotifier` (`lib/features/settings/settings_provider.dart`):
+  - Immutable state with all settings: themeMode, accentColour, defaultCraftType, unitSystem, counterHaptics, counterSound, keepScreenAwake, hasCompletedOnboarding
+  - `AccentColour` enum with 6 presets: mauve, teal, coral, sage, indigo, rust
+  - `CounterSound` enum: off, soft, loud
+  - SharedPreferences persistence on every change with try/catch for test safety
+- Updated `core/providers.dart` — all providers now delegate to `settingsProvider` for persistence:
+  - `themeModeProvider`, `unitSystemProvider`, `counterHapticsProvider`, `counterSoundProvider`, `keepScreenAwakeProvider`
+- Built `SettingsScreen` (`lib/features/settings/screens/settings_screen.dart`):
+  - Appearance: Theme mode SegmentedButton (Light/Dark/System), accent colour picker (6 circular swatches)
+  - Craft Defaults: SegmentedButton (Knitting/Crochet/Both)
+  - Units: SegmentedButton (Metric/Imperial)
+  - Counter: Haptics SwitchListTile, sound DropdownButton (Off/Soft/Loud), keep screen awake SwitchListTile
+  - About: Version info, Acknowledgements dialog with open source package list
+- Built `OnboardingScreen` (`lib/features/settings/screens/onboarding_screen.dart`):
+  - 3-page PageView: Welcome, Counter, Projects
+  - Animated dot indicators, Skip button, Next/Done navigation
+  - Completes onboarding and navigates to home
+- Updated `main.dart` to show `OnboardingScreen` on first launch (when `hasCompletedOnboarding` is false)
+- Added Settings route to go_router (`/tools/settings`)
+- Added Settings card to `ToolsScreen`
+- Fixed `counter_sound_provider` type from `bool` to `CounterSound` in `core/providers.dart`
+- Updated `CounterScreen` to check `CounterSound.off` instead of `false`
+- Fixed existing widget tests to override settings provider and skip onboarding
+- **Unit tests**: 11 tests for SettingsState, SettingsNotifier (all setters, onboarding)
+- **Widget tests**: 10 tests for SettingsScreen and OnboardingScreen
+- All tests pass (239 total), `flutter analyze` zero issues, code formatted
+
+**In Progress:**
+- None
+
+**Next Session:**
+- Begin Sprint 8: QA & Release Prep (device testing, bug fixes, store assets, privacy policy, submission)
+
+**Issues / Decisions Made:**
+- `context.go('/')` in OnboardingScreen wrapped in try/catch to handle missing GoRouter in test environment
+- Existing `widget_test.dart` app-level tests now override `settingsProvider` with `hasCompletedOnboarding: true` to bypass onboarding
+- `SharedPreferences.getInstance()` can throw in test environment — all calls wrapped in try/catch
+- Accent colour picker is visible to all users but will be Pro-gated in a future update when purchase flow is implemented
+- Counter sound provider changed from `bool` to `CounterSound` enum to support 3 states (off/soft/loud)
